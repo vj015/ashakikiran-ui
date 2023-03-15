@@ -14,21 +14,25 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 /* import specific icons */
-import { faUserSecret, faBars } from "@fortawesome/free-solid-svg-icons";
+import {
+  faUserSecret,
+  faBars,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
 
 /* add icons to the library */
 library.add(faUserSecret);
 library.add(faBars);
+library.add(faUser);
 
 /* add font awesome icon component */
 Vue.component("font-awesome-icon", FontAwesomeIcon);
-
-Vue.config.productionTip = false;
-
 // Make BootstrapVue available throughout your project
 Vue.use(BootstrapVue);
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin);
+
+Vue.config.productionTip = false;
 
 new Vue({
   router,
