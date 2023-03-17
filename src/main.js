@@ -18,12 +18,21 @@ import {
   faUserSecret,
   faBars,
   faUser,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
+
+import {
+  faFacebook,
+  faInstagram,
+  faTwitter,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
 /* add icons to the library */
 library.add(faUserSecret);
 library.add(faBars);
-library.add(faUser);
+library.add(faUser, faXmark);
+library.add(faFacebook, faInstagram, faTwitter, faLinkedin);
 
 /* add font awesome icon component */
 Vue.component("font-awesome-icon", FontAwesomeIcon);

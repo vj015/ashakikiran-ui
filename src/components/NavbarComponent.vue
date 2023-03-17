@@ -18,17 +18,13 @@
           <b-nav-item href="/subscribe" class="formatnavtabs"
             >Contact
           </b-nav-item>
-          <!-- <b-nav-item href="/subscribe" class="formatnavtabs"
+          <b-nav-item href="/subscribe" class="formatnavtabs"
             >Register
-          </b-nav-item> -->
-          <b-nav-item-dropdown text="Register" class="formatnavtabs">
-            <b-dropdown-item href="#">Login</b-dropdown-item>
-            <b-dropdown-item href="#">Signup</b-dropdown-item>
-          </b-nav-item-dropdown>
+          </b-nav-item>
         </b-nav>
       </div>
       <div class="col-2 formatdonate">
-        <b-button>Donate us</b-button>
+        <b-button>Donate</b-button>
       </div>
       <!-- <div class="col-1 formaticon">
         <b-dropdown class="abc">
@@ -40,21 +36,76 @@
         </b-dropdown>
       </div> -->
     </div>
+    <div class="row" v-if="this.mobileview && !this.mobilesm">
+      <div class="col-2">
+        <font-awesome-icon
+          icon="fa-solid fa-bars"
+          class="formatbar"
+          @click="opensummary"
+          v-if="!this.open"
+        />
+        <font-awesome-icon
+          icon="fa-solid fa-xmark"
+          class="formatbar"
+          @click="opensummary"
+          v-if="this.open"
+        />
+      </div>
+      <div class="col-6 adj">
+        <img src="../assets/AshaKiKiran_logo.jpg" alt="Logo" class="logo1" />
+        <div class="akk">Asha Ki Kiran</div>
+      </div>
+      <div class="col-4 formatdonate">
+        <b-button class="mob-btn">Donate</b-button>
+      </div>
+    </div>
+    <div class="row" v-if="this.mobilesm">
+      <div class="col">
+        <font-awesome-icon
+          icon="fa-solid fa-bars"
+          class="formatbar"
+          @click="opensummary"
+          v-if="!this.open"
+        />
+        <font-awesome-icon
+          icon="fa-solid fa-xmark"
+          class="formatbar"
+          @click="opensummary"
+          v-if="this.open"
+        />
+      </div>
+      <div class="col adj">
+        <img src="../assets/AshaKiKiran_logo.jpg" alt="Logo" class="logo1" />
+        <div class="akk"><b-button>Donate</b-button></div>
+      </div>
+    </div>
+    <MobileNav v-if="this.open && (this.mobilesm || this.mobileview)" />
   </div>
 </template>
 
 <script>
+import MobileNav from "./MobileNav.vue";
 export default {
   name: "NavbarComponent",
   data() {
     return {
       mobileview: false,
       mobileWidth: window.innerWidth,
+      open: false,
+      mobilesm: false,
     };
+  },
+  components: {
+    MobileNav,
   },
   methods: {
     handlemobileview() {
-      this.mobileview = window.innerWidth <= 934;
+      this.mobileview = window.outerWidth <= 665;
+      this.mobilesm = window.outerWidth <= 277;
+    },
+    opensummary() {
+      console.log("Open Modal");
+      this.open = !this.open;
     },
   },
   created() {
@@ -72,13 +123,22 @@ export default {
   width: 120px;
   border-radius: 100px;
 }
+.adj {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo1 {
+  height: 120px;
+  width: 120px;
+  border-radius: 100px;
+}
+.formatbar {
+  margin-top: 30px;
+  margin-left: 30px;
+}
 .formatlogo {
   left: 0px;
-}
-.formatlogo span {
-  margin-left: 8px;
-  font-family: fantasy;
-  font-weight: bold;
 }
 .nav-item a {
   color: black !important;
@@ -114,6 +174,46 @@ li.nav-item.formatnavtabs {
   margin-left: 25px;
   margin-top: 5px;
 }
+@media screen and (max-width: 365px) {
+  .adj {
+    width: 175px;
+  }
+  .logo1 {
+    height: 80px;
+    width: 80px;
+    border-radius: 80px;
+  }
+}
+@media screen and (max-width: 290px) {
+  .adj {
+    width: 130px;
+  }
+  .logo1 {
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+  }
+  .formatbar {
+    margin-left: 10px;
+    width: 10px;
+  }
+  .mob-btn {
+    width: 80px;
+  }
+}
+@media screen and (max-width: 326px) {
+  .adj {
+    width: 150px;
+  }
+  .logo1 {
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+  }
+  .formatbar {
+    margin-left: 20px;
+  }
+}
 @media screen and (max-width: 1105px) {
   .logo {
     height: 105px;
@@ -134,6 +234,48 @@ li.nav-item.formatnavtabs {
   .outer {
     margin-left: 14px;
     margin-top: 5px;
+  }
+}
+@media screen and (max-width: 934px) {
+  .logo {
+    height: 85px;
+    width: 85px;
+    border-radius: 80px;
+  }
+  .outer {
+    margin-left: 12px;
+    margin-top: 5px;
+  }
+}
+@media screen and (max-width: 838px) {
+  .logo {
+    height: 80px;
+    width: 80px;
+    border-radius: 75px;
+  }
+  .outer {
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+}
+@media screen and (max-width: 727px) {
+  .formatdonate {
+    margin-top: 22px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .outer {
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .logo1 {
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+  }
+  .mob-btn {
+    width: 100px;
   }
 }
 </style>
