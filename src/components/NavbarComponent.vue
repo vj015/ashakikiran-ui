@@ -79,24 +79,19 @@
         <div class="akk"><b-button>Donate</b-button></div>
       </div>
     </div>
-    <MobileNav v-if="this.open && (this.mobilesm || this.mobileview)" />
   </div>
 </template>
 
 <script>
-import MobileNav from "./MobileNav.vue";
 export default {
   name: "NavbarComponent",
+  props: ["open"],
   data() {
     return {
       mobileview: false,
       mobileWidth: window.innerWidth,
-      open: false,
       mobilesm: false,
     };
-  },
-  components: {
-    MobileNav,
   },
   methods: {
     handlemobileview() {
@@ -104,8 +99,7 @@ export default {
       this.mobilesm = window.outerWidth <= 277;
     },
     opensummary() {
-      console.log("Open Modal");
-      this.open = !this.open;
+      this.$emit("togglesidebar");
     },
   },
   created() {
