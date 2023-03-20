@@ -26,15 +26,6 @@
       <div class="col-2 formatdonate">
         <b-button>Donate</b-button>
       </div>
-      <!-- <div class="col-1 formaticon">
-        <b-dropdown class="abc">
-          <template #button-content>
-            <font-awesome-icon icon="fa-solid fa-user" />
-          </template>
-          <b-dropdown-item href="#">Register</b-dropdown-item>
-          <b-dropdown-item href="#">Sign in</b-dropdown-item>
-        </b-dropdown>
-      </div> -->
     </div>
     <div class="row" v-if="this.mobileview && !this.mobilesm">
       <div class="col-2">
@@ -102,6 +93,9 @@ export default {
       this.$emit("togglesidebar");
     },
   },
+  mounted() {
+    this.handlemobileview();
+  },
   created() {
     window.addEventListener("resize", this.handlemobileview);
   },
@@ -128,14 +122,21 @@ export default {
   border-radius: 100px;
 }
 .formatbar {
-  margin-top: 30px;
-  margin-left: 30px;
+  position: absolute;
+  top: 30px;
+  font-size: large;
+  left: 25px;
+}
+.akk {
+  font-weight: bold;
+  font-style: italic;
 }
 .formatlogo {
   left: 0px;
 }
 .nav-item a {
   color: black !important;
+  font-size: large;
 }
 .nav-item a:hover {
   color: black !important;
@@ -167,46 +168,6 @@ li.nav-item.formatnavtabs {
 .outer {
   margin-left: 25px;
   margin-top: 5px;
-}
-@media screen and (max-width: 365px) {
-  .adj {
-    width: 175px;
-  }
-  .logo1 {
-    height: 80px;
-    width: 80px;
-    border-radius: 80px;
-  }
-}
-@media screen and (max-width: 290px) {
-  .adj {
-    width: 130px;
-  }
-  .logo1 {
-    height: 60px;
-    width: 60px;
-    border-radius: 60px;
-  }
-  .formatbar {
-    margin-left: 10px;
-    width: 10px;
-  }
-  .mob-btn {
-    width: 80px;
-  }
-}
-@media screen and (max-width: 326px) {
-  .adj {
-    width: 150px;
-  }
-  .logo1 {
-    height: 60px;
-    width: 60px;
-    border-radius: 60px;
-  }
-  .formatbar {
-    margin-left: 20px;
-  }
 }
 @media screen and (max-width: 1105px) {
   .logo {
@@ -262,6 +223,18 @@ li.nav-item.formatnavtabs {
     margin-left: 0px;
   }
 }
+@media screen and (max-width: 665px) {
+  .logo1 {
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+  }
+  .mob-btn {
+    width: 100px;
+    position: absolute;
+    right: 20px;
+  }
+}
 @media screen and (max-width: 450px) {
   .logo1 {
     height: 100px;
@@ -270,6 +243,58 @@ li.nav-item.formatnavtabs {
   }
   .mob-btn {
     width: 100px;
+  }
+}
+@media screen and (max-width: 365px) {
+  .adj {
+    width: 175px;
+  }
+  .logo1 {
+    height: 80px;
+    width: 80px;
+    border-radius: 80px;
+  }
+  .formatbar {
+    position: absolute;
+    top: 30px;
+    font-size: small;
+    left: 20px;
+  }
+  .mob-btn {
+    width: 100px;
+    position: absolute;
+    right: 10px;
+  }
+}
+@media screen and (max-width: 326px) {
+  .adj {
+    width: 150px;
+  }
+  .logo1 {
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+  }
+  .formatbar {
+    position: absolute;
+    top: 30px;
+    font-size: small;
+    left: 20px;
+  }
+  .mob-btn {
+    width: 100px;
+    position: absolute;
+    right: 10px;
+  }
+}
+@media screen and (max-width: 277px) {
+  .adj {
+    width: 130px;
+  }
+  .logo1 {
+    height: 80px;
+    width: 80px;
+    border-radius: 60px;
   }
 }
 </style>

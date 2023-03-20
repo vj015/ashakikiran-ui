@@ -19,6 +19,9 @@ import {
   faBars,
   faUser,
   faXmark,
+  faHeart,
+  faThumbsUp,
+  faShareFromSquare,
 } from "@fortawesome/free-solid-svg-icons";
 
 import {
@@ -31,7 +34,7 @@ import {
 /* add icons to the library */
 library.add(faUserSecret);
 library.add(faBars);
-library.add(faUser, faXmark);
+library.add(faUser, faXmark, faHeart, faThumbsUp, faShareFromSquare);
 library.add(faFacebook, faInstagram, faTwitter, faLinkedin);
 
 /* add font awesome icon component */

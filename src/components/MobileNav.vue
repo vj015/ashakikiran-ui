@@ -8,12 +8,12 @@
       <li>Contact</li>
       <li>Register</li>
     </ul>
-    <div class="social-media">
+    <!-- <div class="social-media">
       <font-awesome-icon icon="fa-brands fa-facebook" class="ic" />
       <font-awesome-icon icon="fa-brands fa-instagram" class="ic" />
       <font-awesome-icon icon="fa-brands fa-twitter" class="ic" />
       <font-awesome-icon icon="fa-brands fa-linkedin" class="ic" />
-    </div>
+    </div> -->
   </div>
 </template>
 

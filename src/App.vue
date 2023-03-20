@@ -12,14 +12,17 @@
       />
     </div>
     <MobileNav v-if="this.showsidebar" />
-    <div class="bodystl" v-if="!this.showsidebar"></div>
-    <div class="footerstl" v-if="!this.showsidebar"><FootbarComponent /></div>
+    <div class="bodystl" v-if="!this.showsidebar">
+      <HomeView />
+    </div>
+    <!-- <div class="footerstl" v-if="!this.showsidebar"><FootbarComponent /></div> -->
   </div>
 </template>
 <script>
 import NavbarComponent from "./components/NavbarComponent.vue";
-import FootbarComponent from "./components/FootbarComponent.vue";
+// import FootbarComponent from "./components/FootbarComponent.vue";
 import MobileNav from "./components/MobileNav.vue";
+import HomeView from "./views/HomeView.vue";
 export default {
   data() {
     return {
@@ -28,8 +31,9 @@ export default {
   },
   components: {
     NavbarComponent,
-    FootbarComponent,
+    // FootbarComponent,
     MobileNav,
+    HomeView,
   },
   methods: {
     togglesidebar() {
@@ -39,9 +43,17 @@ export default {
 };
 </script>
 <style>
+#app {
+  position: relative;
+}
+.bodystl {
+  width: 100%;
+  height: auto;
+}
 .footerstl {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
+  max-height: 160px !important;
 }
 </style>
