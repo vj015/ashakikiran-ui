@@ -22,8 +22,9 @@ import {
   faHeart,
   faThumbsUp,
   faShareFromSquare,
+  faCircleUser,
 } from "@fortawesome/free-solid-svg-icons";
-
+import { faHeart as liked } from "@fortawesome/free-regular-svg-icons";
 import {
   faFacebook,
   faInstagram,
@@ -32,7 +33,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 /* add icons to the library */
-library.add(faUserSecret);
+library.add(faUserSecret, liked, faCircleUser);
 library.add(faBars);
 library.add(faUser, faXmark, faHeart, faThumbsUp, faShareFromSquare);
 library.add(faFacebook, faInstagram, faTwitter, faLinkedin);

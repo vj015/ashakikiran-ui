@@ -19,7 +19,7 @@
             >Contact
           </b-nav-item>
           <b-nav-item href="/subscribe" class="formatnavtabs"
-            >Register
+            ><font-awesome-icon :icon="['fas', 'circle-user']" beat size="lg" />
           </b-nav-item>
         </b-nav>
       </div>
