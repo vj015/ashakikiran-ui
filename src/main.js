@@ -23,6 +23,9 @@ import {
   faThumbsUp,
   faShareFromSquare,
   faCircleUser,
+  faEnvelope,
+  faPhone,
+  faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 import { faHeart as liked } from "@fortawesome/free-regular-svg-icons";
 import {
@@ -30,13 +33,21 @@ import {
   faInstagram,
   faTwitter,
   faLinkedin,
+  faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 
 /* add icons to the library */
-library.add(faUserSecret, liked, faCircleUser);
+library.add(
+  faUserSecret,
+  liked,
+  faCircleUser,
+  faEnvelope,
+  faPhone,
+  faLocationDot
+);
 library.add(faBars);
 library.add(faUser, faXmark, faHeart, faThumbsUp, faShareFromSquare);
-library.add(faFacebook, faInstagram, faTwitter, faLinkedin);
+library.add(faFacebook, faInstagram, faTwitter, faLinkedin, faYoutube);
 
 /* add font awesome icon component */
 Vue.component("font-awesome-icon", FontAwesomeIcon);

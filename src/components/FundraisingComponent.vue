@@ -26,31 +26,34 @@
             </h6>
             <p>{{ item.message }}</p>
             <div class="row">
-              <div class="col-8">
+              <div class="col-6">
                 <b-btn lg variant="outline-danger">Donate</b-btn>
               </div>
-              <div class="col-3">
-                <font-awesome-icon
-                  :icon="['fas', 'heart']"
-                  shake
-                  size="lg"
-                  color="red"
-                  class="m-2"
-                />
-                <font-awesome-icon
-                  icon="fa-regular fa-heart"
-                  size="lg"
-                  color="red"
-                  class="m-2"
-                />
-
-                <font-awesome-icon
-                  :icon="['fas', 'share-from-square']"
-                  beat
-                  size="lg"
-                  color="red"
-                  class="m-2"
-                />
+              <div class="col-6 abc">
+                <div class="likealign">
+                  <font-awesome-icon
+                    icon="fa-regular fa-heart"
+                    color="red"
+                    size="lg"
+                    @click="handleLike(item.id)"
+                    v-show="!verifyliked(item.id)"
+                  />
+                  <font-awesome-icon
+                    :icon="['fas', 'heart']"
+                    size="lg"
+                    color="red"
+                    @click="handleunLike(item.id)"
+                    v-show="verifyliked(item.id)"
+                  />
+                  <p>{{ item.likes }}</p>
+                </div>
+                <div class="sharealign">
+                  <font-awesome-icon
+                    :icon="['fas', 'share-from-square']"
+                    color="red"
+                    size="lg"
+                  />
+                </div>
               </div>
             </div>
           </b-card-text>
@@ -75,7 +78,7 @@ export default {
           totalmount: 10000000,
           startDate: "kdkd",
           endDate: "13/03/2025",
-          likes: 0,
+          likes: 10,
         },
         {
           id: 2,
@@ -87,7 +90,7 @@ export default {
           totalmount: 1000000,
           startDate: "kdkd",
           endDate: "13/03/2025",
-          likes: 0,
+          likes: 95,
         },
         {
           id: 3,
@@ -99,22 +102,40 @@ export default {
           totalmount: 1000000,
           startDate: "kdkd",
           endDate: "13/03/2025",
-          likes: 0,
-        },
-        {
-          id: 4,
-          title: "Donate to oldage home of 20 poor oldage people in India",
-          src: require("../assets/images/fund4.jpg"),
-          message:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione consequuntur, veniam eveniet maxime consequatur facilis tempora Sunt deserunt aperiam iure doloribus maxime reiciendis, natus accusantium. Ab asperiores repudiandae, exercitationem voluptas repellendus fugiat nostrum? Soluta?",
-          currentamount: 6188577,
-          totalmount: 9000000,
-          startDate: "kdkd",
-          endDate: "13/03/2025",
-          likes: 0,
+          likes: 50,
         },
       ],
+      isliked: [false, false, false, false],
     };
+  },
+  methods: {
+    handleLike(id) {
+      this.isliked[id - 1] = true;
+      this.items[id - 1].likes += 1;
+    },
+    handleunLike(id) {
+      this.isliked[id - 1] = false;
+      if (this.items[id - 1].likes != 0) {
+        this.items[id - 1].likes -= 1;
+      }
+    },
+    verifyliked(id) {
+      return this.isliked[id - 1];
+    },
   },
 };
 </script>
+<style scoped>
+.abc {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+.likealign {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 20px;
+}
+</style>

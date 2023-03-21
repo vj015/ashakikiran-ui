@@ -1,49 +1,68 @@
 <template>
   <footer class="footer-distributed">
     <div class="footer-left">
-      <h3>Asha<span>ki Kiran</span></h3>
+      <h3>Asha Ki<span>Kiran</span></h3>
 
       <p class="footer-links">
         <a href="#">Home</a>
         |
         <a href="#">About</a>
         |
-        <a href="#">Past Activities</a>
-        |
         <a href="#">Fundraisings</a>
+        |
+        <a href="#">Celebrate with us</a>
       </p>
 
       <p class="footer-company-name">
-        Copyright © 2023 <strong>Asha ki Kiran</strong> All rights reserved
+        Copyright © 2023 <strong>Asha Ki Kiran Foundation</strong>
       </p>
     </div>
 
     <div class="footer-center">
       <div>
-        <i class="fa fa-map-marker"></i>
-        <p>Kanpur</p>
+        <font-awesome-icon icon="fa-solid fa-location-dot" color="#ff0003" />
+        <p>Kanpur, U.P</p>
       </div>
 
       <div>
-        <i class="fa fa-phone"></i>
+        <font-awesome-icon icon="fa-solid fa-phone" color="#ff0003" />
         <p>+91 9076526926</p>
       </div>
       <div>
-        <i class="fa fa-envelope"></i>
-        <p><b-btn>Donate</b-btn></p>
+        <font-awesome-icon icon="fa-solid fa-envelope" color="#ff0003" />
+        <p>
+          <a href="mailto:ashakikiran@gmail.com">support@ashakikiran.in</a>
+        </p>
       </div>
+      <b-button class="stylbtn mt-4">Donate us!</b-button>
     </div>
     <div class="footer-right">
-      <p class="footer-company-about">
-        <span>About the NGO</span>
-        <strong>Asha ki Kiran</strong>is a leading NGO in the area of child
-        education, noursihment and care
-      </p>
+      <div class="footer-company-about">
+        <span>Send us a message</span>
+        <b-form-input
+          v-model="text"
+          placeholder=" Full Name"
+          class="mt-2"
+        ></b-form-input>
+        <b-input-group prepend="+91" class="mt-2 mr-sm-2 mb-sm-0">
+          <b-form-input id="mobile" placeholder="Mobile Number"></b-form-input>
+        </b-input-group>
+        <b-form-textarea
+          id="textarea"
+          v-model="msg"
+          placeholder="Message"
+          rows="3"
+          max-rows="6"
+          class="mt-2 mb-2"
+        ></b-form-textarea>
+        <b-button class="stylbtn">Send</b-button>
+      </div>
       <div class="footer-icons">
         <a href="#"><font-awesome-icon icon="fa-brands fa-facebook" /></a>
         <a href="#"><font-awesome-icon icon="fa-brands fa-instagram" /></a>
         <a href="#"><font-awesome-icon icon="fa-brands fa-linkedin" /></a>
         <a href="#"><font-awesome-icon icon="fa-brands fa-twitter" /></a>
+        <a href="#"><font-awesome-icon icon="fa-brands fa-youtube" /></a>
       </div>
     </div>
   </footer>
@@ -58,14 +77,7 @@ export default {
   padding: 0;
   margin: 0;
 }
-.btn-secondary {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #ff0003;
-  --bs-btn-border-color: #ffe38f;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #ff0003;
-  --bs-btn-hover-border-color: #ffe38f;
-}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -73,25 +85,16 @@ body {
 html {
   background-color: #eaf0f2;
 }
-
-header {
-  text-align: center;
-  padding-top: 100px;
-  margin-bottom: 300px;
-  font-size: 35px;
+.stylbtn {
+  background-color: #ff0003;
 }
-
-header h2 {
-  color: #ff0003;
-}
-
-header span {
-  color: #ff0003;
+.stylbtn :hover {
+  background-color: #ffe28c;
 }
 
 /* The footer is fixed to the bottom of the page */
 
-footer {
+/* footer {
   position: fixed;
   bottom: 0;
 }
@@ -103,7 +106,7 @@ footer {
   header {
     padding-top: 40px;
   }
-}
+} */
 
 .footer-distributed {
   background-color: #2d2a30;
@@ -141,7 +144,7 @@ footer {
 /* Footer links */
 
 .footer-distributed .footer-links {
-  color: #ffffff;
+  color: #ffdb6f;
   margin: 20px 0 12px;
 }
 
@@ -153,7 +156,7 @@ footer {
 }
 
 .footer-distributed .footer-company-name {
-  color: #8f9296;
+  color: #ff0003;
   font-size: 14px;
   font-weight: normal;
   margin: 0;
@@ -198,7 +201,7 @@ footer {
 }
 
 .footer-distributed .footer-center p a {
-  color: #ff0003;
+  color: #ffdb6f;
   text-decoration: none;
 }
 
@@ -244,11 +247,11 @@ footer {
 }
 
 .footer-distributed .footer-icons a:hover {
-  background-color: #3f71ea;
+  background-color: #ff0003;
 }
 
 .footer-links a:hover {
-  color: #3f71ea;
+  color: #ff0003;
 }
 
 @media (max-width: 880px) {
