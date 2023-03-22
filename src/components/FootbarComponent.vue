@@ -236,10 +236,10 @@ html {
   width: 35px;
   height: 35px;
   cursor: pointer;
-  background-color: #33383b;
+  background-color: #2d2a30;
   border-radius: 2px;
   font-size: 20px;
-  color: #ffffff;
+  color: #ff0003;
   text-align: center;
   line-height: 35px;
   margin-right: 3px;
@@ -247,11 +247,11 @@ html {
 }
 
 .footer-distributed .footer-icons a:hover {
-  background-color: #ff0003;
+  background-color: #ffdb6f;
 }
 
 .footer-links a:hover {
-  color: #ff0003;
+  color: #ffdb6f;
 }
 
 @media (max-width: 880px) {
