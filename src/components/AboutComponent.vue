@@ -1,13 +1,13 @@
 import AboutView from '@/views/AboutView.vue';
 
 <template>
-  <div>
+  <div class="container">
     <div class="mt-2 mb-1">
       <b-card no-body class="text-center">
         <h3>About us</h3>
       </b-card>
     </div>
-    <div class="container mt-1 mb-2">
+    <div class="mt-1 mb-2">
       <b-card no-body class="overflow-hidden">
         <b-row no-gutters>
           <b-col md="4">

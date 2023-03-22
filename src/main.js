@@ -26,6 +26,9 @@ import {
   faEnvelope,
   faPhone,
   faLocationDot,
+  faArrowRight,
+  faArrowUp,
+  faArrowDown,
 } from "@fortawesome/free-solid-svg-icons";
 import { faHeart as liked } from "@fortawesome/free-regular-svg-icons";
 import {
@@ -43,7 +46,10 @@ library.add(
   faCircleUser,
   faEnvelope,
   faPhone,
-  faLocationDot
+  faLocationDot,
+  faArrowRight,
+  faArrowDown,
+  faArrowUp
 );
 library.add(faBars);
 library.add(faUser, faXmark, faHeart, faThumbsUp, faShareFromSquare);

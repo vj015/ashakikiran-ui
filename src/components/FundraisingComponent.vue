@@ -1,14 +1,14 @@
 <template>
-  <div class="mt-4">
+  <div class="container mt-4">
     <div class="mt-2 mb-1">
       <b-card no-body class="text-center">
-        <h3>Fundraisings: No one has ever become poor from giving</h3>
+        <h2>Our Causes</h2>
       </b-card>
     </div>
     <div>
       <b-card-group>
         <b-card v-for="item in this.items" :key="item.id">
-          <b-card-img :src="item.src"></b-card-img>
+          <b-card-img :src="item.src" class="formatcardimg"></b-card-img>
           <b-card-text>
             <div class="d-flex justify-content-center mt-2">
               <h4>{{ item.title }}</h4>
@@ -137,5 +137,8 @@ export default {
   align-items: center;
   flex-direction: column;
   margin-right: 20px;
+}
+.formatcardimg {
+  max-height: 300px;
 }
 </style>
