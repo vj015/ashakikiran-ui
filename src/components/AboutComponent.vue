@@ -1,5 +1,3 @@
-import AboutView from '@/views/AboutView.vue';
-
 <template>
   <div class="container">
     <div class="mt-2 mb-1">

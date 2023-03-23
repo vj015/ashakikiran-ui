@@ -11,15 +11,21 @@
         <b-nav small>
           <b-nav-item href="/" class="formatnavtabs">Home </b-nav-item>
           <b-nav-item href="/events" class="formatnavtabs">About-us</b-nav-item>
-          <b-nav-item href="/about" class="formatnavtabs">Our-Work</b-nav-item>
-          <b-nav-item href="/subscribe" class="formatnavtabs"
-            >Get-Involved
-          </b-nav-item>
+          <b-nav-item-dropdown text="Our-Work" class="formatnavtabs" right>
+            <b-dropdown-item href="#">Events</b-dropdown-item>
+            <b-dropdown-item href="#">Fundraisings</b-dropdown-item>
+            <b-dropdown-item href="#">Campaigns</b-dropdown-item>
+          </b-nav-item-dropdown>
+          <b-nav-item-dropdown text="Get-Involved" class="formatnavtabs" right>
+            <b-dropdown-item href="#">Member</b-dropdown-item>
+            <b-dropdown-item href="#">Volunteer</b-dropdown-item>
+            <b-dropdown-item href="#">Intern</b-dropdown-item>
+          </b-nav-item-dropdown>
           <b-nav-item href="/subscribe" class="formatnavtabs"
             >Contact
           </b-nav-item>
           <b-nav-item href="/subscribe" class="formatnavtabs"
-            ><font-awesome-icon :icon="['fas', 'circle-user']" beat size="lg" />
+            >Register
           </b-nav-item>
         </b-nav>
       </div>
@@ -105,11 +111,11 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style>
 .logo {
-  height: 120px;
-  width: 120px;
-  border-radius: 100px;
+  height: 120px !important;
+  width: 120px !important;
+  border-radius: 100px !important;
 }
 .adj {
   display: flex;
@@ -117,9 +123,9 @@ export default {
   align-items: center;
 }
 .logo1 {
-  height: 120px;
-  width: 120px;
-  border-radius: 100px;
+  height: 120px !important;
+  width: 120px !important;
+  border-radius: 100px !important;
 }
 .formatbar {
   position: absolute;
@@ -132,7 +138,7 @@ export default {
   font-style: italic;
 }
 .formatlogo {
-  left: 0px;
+  left: 0px !important;
 }
 .nav-item a {
   color: black !important;
@@ -151,23 +157,27 @@ li.nav-item.formatnavtabs {
   flex-wrap: wrap;
   --bs-nav-link-padding-x: 0rem;
 }
+.nav-link {
+  color: black !important;
+  font-size: large;
+}
 .formatdonate {
-  margin-top: 25px;
+  margin-top: 25px !important;
 }
 .formaticon {
   margin-top: 25px;
 }
 .btn-secondary {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #ff0003;
-  --bs-btn-border-color: #ffe38f;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #ff0003;
-  --bs-btn-hover-border-color: #ffe38f;
+  --bs-btn-color: #fff !important;
+  --bs-btn-bg: #ff0003 !important;
+  --bs-btn-border-color: #ffe38f !important;
+  --bs-btn-hover-color: #fff !important;
+  --bs-btn-hover-bg: #ff0003 !important;
+  --bs-btn-hover-border-color: #ffe38f !important;
 }
 .outer {
-  margin-left: 25px;
-  margin-top: 5px;
+  margin-left: 25px !important;
+  margin-top: 5px !important;
 }
 @media screen and (max-width: 1105px) {
   .logo {
@@ -176,8 +186,8 @@ li.nav-item.formatnavtabs {
     border-radius: 100px;
   }
   .outer {
-    margin-left: 18px;
-    margin-top: 5px;
+    margin-left: 18px !important;
+    margin-top: 5px !important;
   }
 }
 @media screen and (max-width: 1096px) {
@@ -215,12 +225,12 @@ li.nav-item.formatnavtabs {
 }
 @media screen and (max-width: 727px) {
   .formatdonate {
-    margin-top: 22px;
-    padding-left: 0px;
-    padding-right: 0px;
+    margin-top: 22px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
   }
   .outer {
-    margin-left: 0px;
+    margin-left: 0px !important;
   }
 }
 @media screen and (max-width: 665px) {
@@ -230,9 +240,9 @@ li.nav-item.formatnavtabs {
     border-radius: 100px;
   }
   .mob-btn {
-    width: 100px;
-    position: absolute;
-    right: 20px;
+    width: 100px !important;
+    position: absolute !important;
+    right: 20px !important;
   }
 }
 @media screen and (max-width: 450px) {
@@ -242,7 +252,7 @@ li.nav-item.formatnavtabs {
     border-radius: 100px;
   }
   .mob-btn {
-    width: 100px;
+    width: 100px !important;
   }
 }
 @media screen and (max-width: 365px) {
@@ -261,9 +271,9 @@ li.nav-item.formatnavtabs {
     left: 20px;
   }
   .mob-btn {
-    width: 100px;
-    position: absolute;
-    right: 10px;
+    width: 100px !important;
+    position: absolute !important;
+    right: 10px !important;
   }
 }
 @media screen and (max-width: 326px) {
@@ -282,9 +292,9 @@ li.nav-item.formatnavtabs {
     left: 20px;
   }
   .mob-btn {
-    width: 100px;
-    position: absolute;
-    right: 10px;
+    width: 100px !important;
+    position: absolute !important;
+    right: 10px !important;
   }
 }
 @media screen and (max-width: 277px) {

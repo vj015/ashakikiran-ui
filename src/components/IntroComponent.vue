@@ -8,60 +8,14 @@
     >
       <b-carousel-slide
         caption="Asha Ki Kiran"
-        text="Join Hands with Us to Give Every Child a Better Tomorrow: Your Donation Can Make a Difference!"
+        v-for="image in images"
+        :key="image.id"
+        :text="image.title"
       >
         <template #img>
           <img
             class="d-block img-fluid w-100 formatimg"
-            src="../assets/images/BG_2M.jpg"
-            alt="image slot"
-          />
-        </template>
-      </b-carousel-slide>
-      <b-carousel-slide
-        caption="Asha Ki Kiran"
-        text="Help Us Give a Voice to Every Child in Need: Your Donation Can Change Their Lives Forever!"
-      >
-        <template #img>
-          <img
-            class="d-block img-fluid w-100 formatimg"
-            src="../assets/images/BG_4.webp"
-            alt="image slot"
-          />
-        </template>
-      </b-carousel-slide>
-      <b-carousel-slide
-        caption="Asha Ki Kiran"
-        text="Together, Lets make a better world!"
-      >
-        <template #img>
-          <img
-            class="d-block img-fluid w-100 formatimg"
-            src="../assets/images/BG_5M.jpg"
-            alt="image slot"
-          />
-        </template>
-      </b-carousel-slide>
-      <b-carousel-slide
-        caption="Asha Ki Kiran"
-        text="Empowering Children to Reach Their Full Potential: Together We Can Make a Difference!"
-      >
-        <template #img>
-          <img
-            class="d-block img-fluid w-100 formatimg"
-            src="../assets/images/BG_1M.jpg"
-            alt="image slot"
-          />
-        </template>
-      </b-carousel-slide>
-      <b-carousel-slide
-        caption="Asha Ki Kiran"
-        text="Building a Brighter Future for Every Child: Join Us on the Journey!"
-      >
-        <template #img>
-          <img
-            class="d-block img-fluid w-100 formatimg"
-            src="../assets/images/BG_6M.jpg"
+            :src="image.src"
             alt="image slot"
           />
         </template>
@@ -73,7 +27,39 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      images: [
+        {
+          id: 1,
+          title:
+            "Join Hands with Us to Give Every Child a Better Tomorrow: Your Donation Can Make a Difference!",
+          src: require("../assets/images/BG_2M.jpg"),
+        },
+        {
+          id: 2,
+          title:
+            "Help Us Give a Voice to Every Child in Need: Your Donation Can Change Their Lives Forever!",
+          src: require("../assets/images/BG_4.webp"),
+        },
+        {
+          id: 3,
+          title: "Together, Lets make a better world!",
+          src: require("../assets/images/BG_5M.jpg"),
+        },
+        {
+          id: 4,
+          title:
+            "Empowering Children to Reach Their Full Potential: Together We Can Make a Difference!",
+          src: require("../assets/images/BG_1M.jpg"),
+        },
+        {
+          id: 5,
+          title:
+            "Building a Brighter Future for Every Child: Join Us on the Journey!",
+          src: require("../assets/images/BG_6M.jpg"),
+        },
+      ],
+    };
   },
 };
 </script>
