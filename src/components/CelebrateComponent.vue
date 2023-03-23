@@ -32,17 +32,17 @@ export default {
         {
           id: 1,
           description: "Ocassions in orphanage",
-          src: require("../assets/images/Celebrate1.jpg"),
+          src: require("../assets/images/Celebrate1.webp"),
         },
         {
           id: 2,
           description: "Ocassions in old age home",
-          src: require("../assets/images/Celebrate2.jpg"),
+          src: require("../assets/images/Celebrate2.webp"),
         },
         {
           id: 3,
           description: "Organizing medical camps",
-          src: require("../assets/images/MedicalCamps.jpg"),
+          src: require("../assets/images/MedicalCamps.webp"),
         },
         {
           id: 4,
@@ -63,12 +63,12 @@ export default {
         {
           id: 7,
           description: "Adopt a child's education",
-          src: require("../assets/images/adopt.jpg"),
+          src: require("../assets/images/adopt.webp"),
         },
         {
           id: 8,
           description: "Happiness Spreading Camps",
-          src: require("../assets/images/Happiness.jpg"),
+          src: require("../assets/images/Happiness.webp"),
         },
       ],
     };

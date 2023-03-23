@@ -71,7 +71,7 @@ export default {
         {
           id: 1,
           title: "Please Help Me In Saving My Little One's Life",
-          src: require("../assets/images/fund1.jpg"),
+          src: require("../assets/images/fund1.webp"),
           message:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione consequuntur, veniam eveniet maxime consequatur facilis tempora Sunt deserunt aperiam iure doloribus maxime reiciendis, natus accusantium. Ab asperiores repudiandae, exercitationem voluptas repellendus fugiat nostrum? Soluta?",
           currentamount: 2782582,
@@ -83,7 +83,7 @@ export default {
         {
           id: 2,
           title: "Save Special Needs & Abused Animals",
-          src: require("../assets/images/fund3.jpg"),
+          src: require("../assets/images/fund3.webp"),
           message:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione consequuntur, veniam eveniet maxime consequatur facilis tempora Sunt deserunt aperiam iure doloribus maxime reiciendis, natus accusantium. Ab asperiores repudiandae, exercitationem voluptas repellendus fugiat nostrum? Soluta?",
           currentamount: 744217,
@@ -95,7 +95,7 @@ export default {
         {
           id: 3,
           title: "Enable access to positive Childhood experience",
-          src: require("../assets/images/fund2.jpg"),
+          src: require("../assets/images/fund2.webp"),
           message:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione consequuntur, veniam eveniet maxime consequatur facilis tempora Sunt deserunt aperiam iure doloribus maxime reiciendis, natus accusantium. Ab asperiores repudiandae, exercitationem voluptas repellendus fugiat nostrum? Soluta?",
           currentamount: 948057,

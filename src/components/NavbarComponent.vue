@@ -3,7 +3,7 @@
     <div class="row outer" v-if="!mobileview">
       <div class="col-1">
         <div class="formatlogo">
-          <img src="../assets/AshaKiKiran_logo.jpg" alt="Logo" class="logo" />
+          <img src="../assets/AshaKiKiran_logo.webp" alt="Logo" class="logo" />
           <!-- <span>Asha Ki Kiran</span> -->
         </div>
       </div>
@@ -49,7 +49,7 @@
         />
       </div>
       <div class="col-6 adj">
-        <img src="../assets/AshaKiKiran_logo.jpg" alt="Logo" class="logo1" />
+        <img src="../assets/AshaKiKiran_logo.webp" alt="Logo" class="logo1" />
         <div class="akk">Asha Ki Kiran</div>
       </div>
       <div class="col-4 formatdonate">
@@ -72,7 +72,7 @@
         />
       </div>
       <div class="col adj">
-        <img src="../assets/AshaKiKiran_logo.jpg" alt="Logo" class="logo1" />
+        <img src="../assets/AshaKiKiran_logo.webp" alt="Logo" class="logo1" />
         <div class="akk"><b-button>Donate</b-button></div>
       </div>
     </div>

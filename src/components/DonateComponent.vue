@@ -2,7 +2,7 @@
   <div class="mt-4 formatstlcard container">
     <b-card
       title='"No one has ever become poor from giving"'
-      :img-src="require('../assets/images/donate1.jpg')"
+      :img-src="require('../assets/images/donate1.webp')"
       img-alt="Image"
       img-top
       tag="article"

@@ -30,7 +30,7 @@ export default {
           id: 1,
           title:
             "Join Hands with Us to Give Every Child a Better Tomorrow: Your Donation Can Make a Difference!",
-          src: require("../assets/images/BG_2M.jpg"),
+          src: require("../assets/images/BG_2M.webp"),
         },
         {
           id: 2,
@@ -41,19 +41,19 @@ export default {
         {
           id: 3,
           title: "Together, Lets make a better world!",
-          src: require("../assets/images/BG_5M.jpg"),
+          src: require("../assets/images/BG_5M.webp"),
         },
         {
           id: 4,
           title:
             "Empowering Children to Reach Their Full Potential: Together We Can Make a Difference!",
-          src: require("../assets/images/BG_1M.jpg"),
+          src: require("../assets/images/BG_1M.webp"),
         },
         {
           id: 5,
           title:
             "Building a Brighter Future for Every Child: Join Us on the Journey!",
-          src: require("../assets/images/BG_6M.jpg"),
+          src: require("../assets/images/BG_6M.webp"),
         },
       ],
     };

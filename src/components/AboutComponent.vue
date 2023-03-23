@@ -10,7 +10,7 @@
         <b-row no-gutters>
           <b-col md="4">
             <b-card-img
-              :src="require('../assets/images/About.jpg')"
+              :src="require('../assets/images/About.webp')"
               alt="Image"
               class="rounded-0"
             ></b-card-img>
