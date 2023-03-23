@@ -7,18 +7,15 @@
       no-animation
     >
       <b-carousel-slide
-        caption="Asha Ki Kiran"
         v-for="image in images"
         :key="image.id"
-        :text="image.title"
+        :img-src="image.src"
       >
-        <template #img>
-          <img
-            class="d-block img-fluid w-100 formatimg"
-            :src="image.src"
-            alt="image slot"
-          />
-        </template>
+        <h3>{{ "Asha Ki Kiran" }}</h3>
+        <p>{{ image.title }}</p>
+        <b-btn
+          >Explore More <font-awesome-icon icon="fa-solid fa-arrow-right"
+        /></b-btn>
       </b-carousel-slide>
     </b-carousel>
   </div>
@@ -64,7 +61,7 @@ export default {
 };
 </script>
 <style>
-.formatimg {
+.img-fluid {
   height: 600px !important;
   opacity: 0.7;
 }
