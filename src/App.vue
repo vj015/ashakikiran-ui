@@ -11,9 +11,9 @@
         :open="this.showsidebar"
       />
     </div>
-    <MobileNav v-if="this.showsidebar" />
+    <MobileNav @togglesidebar="togglesidebar" v-if="this.showsidebar" />
     <div class="bodystl" v-if="!this.showsidebar">
-      <HomeView />
+      <router-view />
     </div>
     <div class="footerstl" v-if="!this.showsidebar"><FootbarComponent /></div>
   </div>
@@ -22,7 +22,6 @@
 import NavbarComponent from "./components/NavbarComponent.vue";
 import FootbarComponent from "./components/FootbarComponent.vue";
 import MobileNav from "./components/MobileNav.vue";
-import HomeView from "./views/HomeView.vue";
 export default {
   data() {
     return {
@@ -33,11 +32,13 @@ export default {
     NavbarComponent,
     FootbarComponent,
     MobileNav,
-    HomeView,
   },
   methods: {
-    togglesidebar() {
+    togglesidebar(res) {
       this.showsidebar = !this.showsidebar;
+      if (res != undefined) {
+        this.$router.push(res);
+      }
     },
   },
 };

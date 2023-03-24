@@ -10,7 +10,7 @@
       <div class="col-9 mt-1">
         <b-nav small>
           <b-nav-item href="/" class="formatnavtabs">Home </b-nav-item>
-          <b-nav-item href="/events" class="formatnavtabs">About-us</b-nav-item>
+          <b-nav-item href="/about" class="formatnavtabs">About-us</b-nav-item>
           <b-nav-item-dropdown text="Our-Work" class="formatnavtabs" right>
             <b-dropdown-item href="#">Events</b-dropdown-item>
             <b-dropdown-item href="#">Fundraisings</b-dropdown-item>
@@ -21,10 +21,10 @@
             <b-dropdown-item href="#">Volunteer</b-dropdown-item>
             <b-dropdown-item href="#">Intern</b-dropdown-item>
           </b-nav-item-dropdown>
-          <b-nav-item href="/subscribe" class="formatnavtabs"
+          <b-nav-item href="/contactus" class="formatnavtabs"
             >Contact
           </b-nav-item>
-          <b-nav-item href="/subscribe" class="formatnavtabs"
+          <b-nav-item href="/register" class="formatnavtabs"
             >Register
           </b-nav-item>
         </b-nav>

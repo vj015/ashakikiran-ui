@@ -1,16 +1,14 @@
 <template>
   <div class="formatframe">
-    <iframe
-      width="900"
-      height="500"
-      src="https://www.youtube.com/embed/C08bGqoehnE"
-    >
-    </iframe>
+    <iframe width="900" height="500" :src="src"> </iframe>
   </div>
 </template>
 <script>
 export default {
   name: "TestimonialComponent",
+  props: {
+    src: String,
+  },
 };
 </script>
 <style scoped>

@@ -1,12 +1,12 @@
 <template>
   <div id="navigation-mobile">
     <ul>
-      <li>Home</li>
-      <li>About us</li>
-      <li>Our Work</li>
-      <li>Get Involved</li>
-      <li>Contact</li>
-      <li>Register</li>
+      <li @click="handleredirect1('/')">Home</li>
+      <li @click="handleredirect1('/about')">About us</li>
+      <li @click="handleredirect1('/events')">Our Work</li>
+      <li @click="handleredirect1('/join')">Get Involved</li>
+      <li @click="handleredirect1('/contactus')">Contact</li>
+      <li @click="handleredirect1('/register')">Register</li>
     </ul>
     <!-- <div class="social-media">
       <font-awesome-icon icon="fa-brands fa-facebook" class="ic" />
@@ -20,6 +20,11 @@
 <script>
 export default {
   name: "MobileNav",
+  methods: {
+    handleredirect1(str) {
+      this.$emit("togglesidebar", str);
+    },
+  },
 };
 </script>
 

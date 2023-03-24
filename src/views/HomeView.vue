@@ -6,7 +6,7 @@
     <CelebrateComponent />
     <UpcomingEventComponent />
     <DonateComponent />
-    <TestimonialComponent />
+    <TestimonialComponent src="https://www.youtube.com/embed/bO0oHSqGfYA" />
   </div>
 </template>
 
