@@ -16,16 +16,19 @@
             <b-dropdown-item href="#">Fundraisings</b-dropdown-item>
             <b-dropdown-item href="#">Campaigns</b-dropdown-item>
           </b-nav-item-dropdown>
-          <b-nav-item-dropdown text="Get-Involved" class="formatnavtabs" right>
-            <b-dropdown-item href="#">Member</b-dropdown-item>
-            <b-dropdown-item href="#">Volunteer</b-dropdown-item>
-            <b-dropdown-item href="#">Intern</b-dropdown-item>
+          <b-nav-item-dropdown text="Register" class="formatnavtabs" right>
+            <b-dropdown-item href="/register?member=true"
+              >Register as Member</b-dropdown-item
+            >
+            <b-dropdown-item href="/register?intern=true"
+              >Register as Intern</b-dropdown-item
+            >
           </b-nav-item-dropdown>
           <b-nav-item href="/contactus" class="formatnavtabs"
             >Contact
           </b-nav-item>
-          <b-nav-item href="/register" class="formatnavtabs"
-            >Register
+          <b-nav-item href="/login" class="formatnavtabs"
+            ><font-awesome-icon icon="fa-solid fa-circle-user" size="lg" beat />
           </b-nav-item>
         </b-nav>
       </div>
