@@ -7,7 +7,7 @@
     <b-row no-gutters>
       <b-col md="7" class="formatimg">
         <b-card-img
-          :src="require('../assets/images/internship.webp')"
+          :src="require('../assets/images/demo.webp')"
           alt="Image"
           class="rounded-0"
         ></b-card-img>
