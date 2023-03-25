@@ -2,7 +2,7 @@
   <div class="container mt-2">
     <div class="mt-2 mb-1">
       <b-card no-body class="text-center">
-        <h2>Celebrate with us!</h2>
+        <h2>Make your day memorable with us!</h2>
       </b-card>
     </div>
     <div class="mt-2">

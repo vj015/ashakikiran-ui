@@ -12,9 +12,10 @@
           <b-nav-item href="/" class="formatnavtabs">Home </b-nav-item>
           <b-nav-item href="/about" class="formatnavtabs">About-us</b-nav-item>
           <b-nav-item-dropdown text="Our-Work" class="formatnavtabs" right>
-            <b-dropdown-item href="#">Events</b-dropdown-item>
-            <b-dropdown-item href="#">Fundraisings</b-dropdown-item>
-            <b-dropdown-item href="#">Campaigns</b-dropdown-item>
+            <b-dropdown-item href="/work?events=true">Events</b-dropdown-item>
+            <b-dropdown-item href="/work?fundraising=true"
+              >Fundraisings</b-dropdown-item
+            >
           </b-nav-item-dropdown>
           <b-nav-item-dropdown text="Register" class="formatnavtabs" right>
             <b-dropdown-item href="/register?member=true"
@@ -33,7 +34,7 @@
         </b-nav>
       </div>
       <div class="col-2 formatdonate">
-        <b-button>Donate</b-button>
+        <b-button style="font-family: fantasy">Donate</b-button>
       </div>
     </div>
     <div class="row" v-if="this.mobileview && !this.mobilesm">
@@ -56,7 +57,7 @@
         <div class="akk">Asha Ki Kiran</div>
       </div>
       <div class="col-4 formatdonate">
-        <b-button class="mob-btn">Donate</b-button>
+        <b-button style="font-family: fantasy" class="mob-btn">Donate</b-button>
       </div>
     </div>
     <div class="row" v-if="this.mobilesm">
@@ -76,7 +77,9 @@
       </div>
       <div class="col adj">
         <img src="../assets/AshaKiKiran_logo.webp" alt="Logo" class="logo1" />
-        <div class="akk"><b-button>Donate</b-button></div>
+        <div class="akk">
+          <b-button style="font-family: fantasy">Donate</b-button>
+        </div>
       </div>
     </div>
   </div>

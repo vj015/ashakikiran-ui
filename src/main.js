@@ -29,6 +29,11 @@ import {
   faArrowRight,
   faArrowUp,
   faArrowDown,
+  faHandHoldingHeart,
+  faHandshakeAngle,
+  faHandsHoldingChild,
+  faLocationPin,
+  faCalendarDays,
 } from "@fortawesome/free-solid-svg-icons";
 import { faHeart as liked } from "@fortawesome/free-regular-svg-icons";
 import {
@@ -49,7 +54,12 @@ library.add(
   faLocationDot,
   faArrowRight,
   faArrowDown,
-  faArrowUp
+  faArrowUp,
+  faHandHoldingHeart,
+  faHandshakeAngle,
+  faHandsHoldingChild,
+  faLocationPin,
+  faCalendarDays
 );
 library.add(faBars);
 library.add(faUser, faXmark, faHeart, faThumbsUp, faShareFromSquare);

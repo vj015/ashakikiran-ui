@@ -11,9 +11,9 @@
         :key="image.id"
         :img-src="image.src"
       >
-        <h3>{{ "Asha Ki Kiran" }}</h3>
-        <p>{{ image.title }}</p>
-        <b-btn
+        <h3 class="heading">{{ "Asha Ki Kiran" }}</h3>
+        <p class="title">{{ image.title }}</p>
+        <b-btn style="font-family: fantasy; border: none"
           >Explore More <font-awesome-icon icon="fa-solid fa-arrow-right"
         /></b-btn>
       </b-carousel-slide>
@@ -79,15 +79,14 @@ export default {
 
 .carousel-caption h3 {
   font-size: xxx-large;
-  font-weight: bold;
   color: #ff0003;
-  font-family: inherit;
+  font-family: fantasy;
 }
 .carousel-caption p {
   font-size: x-large;
   font-weight: bolder;
   color: #000000;
-  font-family: inherit;
+  font-family: emoji;
   font-style: italic;
 }
 </style>

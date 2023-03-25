@@ -34,7 +34,11 @@
           <a href="mailto:ashakikiran@gmail.com">support@ashakikiran.in</a>
         </p>
       </div>
-      <b-button class="stylbtn mt-4">Donate us!</b-button>
+      <b-button
+        class="stylbtn mt-4"
+        style="font-family: fantasy; border: none; color: #ffdb6f"
+        >Donate us!</b-button
+      >
     </div>
     <div class="footer-right">
       <div class="footer-company-about">
@@ -55,7 +59,11 @@
           max-rows="6"
           class="mt-2 mb-2"
         ></b-form-textarea>
-        <b-button class="stylbtn">Send</b-button>
+        <b-button
+          class="stylbtn"
+          style="font-family: fantasy; border: none; color: #ffdb6f"
+          >Send</b-button
+        >
       </div>
       <div class="footer-icons">
         <a href="#"><font-awesome-icon icon="fa-brands fa-facebook" /></a>
@@ -91,22 +99,6 @@ html {
 .stylbtn :hover {
   background-color: #ffe28c;
 }
-
-/* The footer is fixed to the bottom of the page */
-
-/* footer {
-  position: fixed;
-  bottom: 0;
-}
-
-@media (max-height: 800px) {
-  footer {
-    position: static;
-  }
-  header {
-    padding-top: 40px;
-  }
-} */
 
 .footer-distributed {
   background-color: #2d2a30;
@@ -153,6 +145,7 @@ html {
   line-height: 1.8;
   text-decoration: none;
   color: inherit;
+  font-family: math;
 }
 
 .footer-distributed .footer-company-name {
@@ -160,6 +153,7 @@ html {
   font-size: 14px;
   font-weight: normal;
   margin: 0;
+  font-family: cursive;
 }
 
 /* Footer Center */
@@ -191,6 +185,7 @@ html {
   color: #ffffff;
   vertical-align: middle;
   margin: 0;
+  font-family: math;
 }
 
 .footer-distributed .footer-center p span {
@@ -203,6 +198,7 @@ html {
 .footer-distributed .footer-center p a {
   color: #ffdb6f;
   text-decoration: none;
+  font-family: math;
 }
 
 /* Footer Right */
@@ -225,6 +221,7 @@ html {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 20px;
+  font-family: math;
 }
 
 .footer-distributed .footer-icons {

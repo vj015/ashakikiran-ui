@@ -8,7 +8,7 @@
       tag="article"
       class="mb-2 text-center"
     >
-      <b-button href="#" variant="danger"
+      <b-button href="#" variant="danger" style="font-family: fantasy"
         >Donate Now <font-awesome-icon icon="fa-solid fa-arrow-right"
       /></b-button>
     </b-card>
@@ -16,6 +16,9 @@
 </template>
 <script></script>
 <style scoped>
+h4 {
+  font-family: fantasy;
+}
 .formatstlcard {
   max-width: 1000px;
   margin: auto;

@@ -1,6 +1,6 @@
 <template>
-  <div class="container mt-4">
-    <div class="mt-2 mb-1">
+  <div class="container">
+    <div class="mt-2 mb-1" v-if="!this.renderinmain">
       <b-card no-body class="text-center">
         <h2>Our Causes</h2>
       </b-card>
@@ -10,7 +10,7 @@
         <b-card v-for="item in this.items" :key="item.id">
           <b-card-img :src="item.src" class="formatcardimg"></b-card-img>
           <b-card-text>
-            <div class="d-flex justify-content-center mt-2">
+            <div class="d-flex justify-content-center formatheading">
               <h4>{{ item.title }}</h4>
             </div>
             <b-progress
@@ -18,7 +18,7 @@
               :max="item.totalmount"
               variant="danger"
               animated="true"
-              class="mt-3 mb-2"
+              class="mt-1 mb-1"
             ></b-progress>
             <h6>
               Raised {{ item.currentamount }} of
@@ -27,7 +27,9 @@
             <p>{{ item.message }}</p>
             <div class="row">
               <div class="col-6">
-                <b-btn lg variant="outline-danger">Donate</b-btn>
+                <b-btn lg variant="outline-danger" style="font-family: fantasy"
+                  >Donate</b-btn
+                >
               </div>
               <div class="col-6 abc">
                 <div class="likealign">
@@ -65,8 +67,21 @@
 <script>
 export default {
   name: "FundraisingComponent",
+  props: {
+    renderinmain: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  mounted() {
+    if (this.renderinmain === true) {
+      this.items = this.items.splice(0, 1);
+      this.showfeatured = true;
+    }
+  },
   data() {
     return {
+      showfeatured: false,
       items: [
         {
           id: 1,
@@ -82,7 +97,7 @@ export default {
         },
         {
           id: 2,
-          title: "Save Special Needs & Abused Animals",
+          title: "Save Special Needs & Abused Animals in stray animals",
           src: require("../assets/images/fund3.webp"),
           message:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione consequuntur, veniam eveniet maxime consequatur facilis tempora Sunt deserunt aperiam iure doloribus maxime reiciendis, natus accusantium. Ab asperiores repudiandae, exercitationem voluptas repellendus fugiat nostrum? Soluta?",
@@ -126,6 +141,19 @@ export default {
 };
 </script>
 <style scoped>
+.formatheading {
+  margin-top: 10px;
+  max-height: 70px;
+}
+h4 {
+  font-family: math;
+}
+h6 {
+  font-family: fantasy;
+}
+p {
+  font-family: cursive;
+}
 .abc {
   display: flex;
   align-items: baseline;

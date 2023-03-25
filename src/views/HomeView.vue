@@ -2,9 +2,9 @@
   <div class="home">
     <IntroComponent />
     <AboutComponent />
-    <FundraisingComponent />
-    <CelebrateComponent />
-    <UpcomingEventComponent />
+    <ReferenceComponent />
+    <WallComponent />
+    <MainpageUpcoming />
     <DonateComponent />
     <TestimonialComponent src="https://www.youtube.com/embed/bO0oHSqGfYA" />
   </div>
@@ -13,21 +13,21 @@
 <script>
 import IntroComponent from "@/components/IntroComponent.vue";
 import AboutComponent from "@/components/AboutComponent.vue";
-import FundraisingComponent from "@/components/FundraisingComponent.vue";
-import CelebrateComponent from "@/components/CelebrateComponent.vue";
-import UpcomingEventComponent from "@/components/UpcomingEventComponent.vue";
 import DonateComponent from "@/components/DonateComponent.vue";
 import TestimonialComponent from "@/components/TestimonialComponent.vue";
+import ReferenceComponent from "@/components/ReferenceComponent.vue";
+import WallComponent from "@/components/WallComponent.vue";
+import MainpageUpcoming from "@/components/MainpageUpcoming.vue";
 export default {
   name: "HomeView",
   components: {
     IntroComponent,
     AboutComponent,
-    FundraisingComponent,
-    CelebrateComponent,
-    UpcomingEventComponent,
     DonateComponent,
     TestimonialComponent,
+    ReferenceComponent,
+    WallComponent,
+    MainpageUpcoming,
   },
 };
 </script>

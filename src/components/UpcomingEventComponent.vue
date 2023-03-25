@@ -99,11 +99,11 @@ export default {
   align-items: center;
 }
 .stlbtn {
-  background-color: #dc3545;
+  background-color: #ff0003;
   margin-left: 10px;
 }
 .stlbtn:hover {
-  background-color: #dc3545;
+  background-color: #ff0003;
   margin-left: 10px;
 }
 </style>

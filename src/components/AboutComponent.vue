@@ -1,12 +1,9 @@
 <template>
-  <div class="container">
-    <div class="mt-2 mb-1">
-      <b-card no-body class="text-center">
-        <h3>About us</h3>
-      </b-card>
-    </div>
+  <div class="container mt-4" style="border: 0.5px solid rgb(0 0 0 / 18%)">
+    <h3>About us</h3>
+    <hr class="formathr" />
     <div class="mt-1 mb-2">
-      <b-card no-body class="overflow-hidden">
+      <b-card no-body class="overflow-hidden" style="border: none">
         <b-row no-gutters>
           <b-col md="4">
             <b-card-img
@@ -16,8 +13,9 @@
             ></b-card-img>
           </b-col>
           <b-col md="8">
-            <b-card-body title="Who we are?">
+            <b-card-body>
               <b-card-text>
+                <h4>Who we are?</h4>
                 <p>
                   We are a compassionate team with a focus on building healthy
                   communities, strengthening families, and creating
@@ -31,7 +29,10 @@
                   project too.
                 </p>
                 <div>
-                  <b-btn class="explore">Explore More!</b-btn>
+                  <b-btn class="explore" style="font-family: fantasy"
+                    >Explore More
+                    <font-awesome-icon icon="fa-solid fa-arrow-right"
+                  /></b-btn>
                 </div>
               </b-card-text>
             </b-card-body>
@@ -42,6 +43,22 @@
   </div>
 </template>
 <style scoped>
+h3 {
+  font-family: fantasy;
+  font-size: xx-large;
+}
+h4 {
+  font-family: math;
+}
+p {
+  font-family: cursive;
+}
+.formathr {
+  height: 4px;
+  width: 20%;
+  border-width: 0;
+  background-color: red;
+}
 .explore {
   background-color: #ff0003;
 }
