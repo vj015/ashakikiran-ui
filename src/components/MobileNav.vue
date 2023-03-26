@@ -3,17 +3,19 @@
     <ul>
       <li @click="handleredirect1('/')">Home</li>
       <li @click="handleredirect1('/about')">About us</li>
-      <li @click="handleredirect1('/events')">Our Work</li>
-      <li @click="handleredirect1('/join')">Get Involved</li>
-      <li @click="handleredirect1('/contactus')">Contact</li>
-      <li @click="handleredirect1('/register')">Register</li>
+      <li @click="handleredirect1('/work?events=true')">Celebrate with us</li>
+      <li @click="handleredirect1('/work?fundraising=true')">Fundraisings</li>
+      <li @click="handleredirect1('/register?member=true')">Membership</li>
+      <li @click="handleredirect1('/register?intern=true')">Internships</li>
+      <li @click="handleredirect1('/contactus')">Contact us</li>
+      <li @click="handleredirect1('/login')">Login</li>
     </ul>
-    <!-- <div class="social-media">
+    <div class="social-media">
       <font-awesome-icon icon="fa-brands fa-facebook" class="ic" />
       <font-awesome-icon icon="fa-brands fa-instagram" class="ic" />
       <font-awesome-icon icon="fa-brands fa-twitter" class="ic" />
       <font-awesome-icon icon="fa-brands fa-linkedin" class="ic" />
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -39,8 +41,8 @@ export default {
 }
 #navigation-mobile ul li {
   color: #141313;
-  font-size: 2rem;
-  font-weight: bold;
+  font-family: fantasy;
+  font-size: x-large;
   margin-bottom: 20px;
   cursor: pointer;
 }
@@ -48,9 +50,9 @@ export default {
   color: #111;
 }
 .social-media {
-  position: absolute;
+  position: relative;
   left: 40px;
-  bottom: 20px;
+  bottom: 0px;
 }
 .ic {
   margin: 0 20px 0 0;
