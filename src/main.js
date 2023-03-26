@@ -34,6 +34,7 @@ import {
   faHandsHoldingChild,
   faLocationPin,
   faCalendarDays,
+  faMessage,
 } from "@fortawesome/free-solid-svg-icons";
 import { faHeart as liked } from "@fortawesome/free-regular-svg-icons";
 import {
@@ -59,7 +60,8 @@ library.add(
   faHandshakeAngle,
   faHandsHoldingChild,
   faLocationPin,
-  faCalendarDays
+  faCalendarDays,
+  faMessage
 );
 library.add(faBars);
 library.add(faUser, faXmark, faHeart, faThumbsUp, faShareFromSquare);
