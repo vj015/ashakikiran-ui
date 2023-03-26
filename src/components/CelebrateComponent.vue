@@ -1,9 +1,8 @@
 <template>
   <div class="container mt-2">
     <div class="mt-2 mb-1">
-      <b-card no-body class="text-center">
-        <h2>Make your day memorable with us!</h2>
-      </b-card>
+      <h3>Make your day memorable with us!</h3>
+      <hr class="formathr" />
     </div>
     <div class="mt-2">
       <b-row>
@@ -16,7 +15,9 @@
             class="m-2"
           >
             <div slot="footer">
-              <b-btn variant="danger">Book</b-btn>
+              <b-btn style="font-family: fantasy" variant="danger"
+                >Book <font-awesome-icon icon="fa-solid fa-arrow-right"
+              /></b-btn>
             </div>
           </b-card>
         </b-card-group>
@@ -76,6 +77,16 @@ export default {
 };
 </script>
 <style scoped>
+h3,
+h4 {
+  font-family: fantasy;
+}
+.formathr {
+  height: 4px;
+  width: 20%;
+  border-width: 0;
+  background-color: red;
+}
 img {
   /* border: 2px solid black; */
   height: 230px;

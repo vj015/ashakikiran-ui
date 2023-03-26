@@ -9,8 +9,9 @@
         </b-col>
         <b-col md="6">
           <b-card-body>
+            <h3>About us</h3>
+            <hr class="formathr" />
             <div class="formatbody">
-              <h3>About us</h3>
               <p>
                 We are a compassionate team with a focus on building healthy
                 communities, strengthening families, and creating opportunities
@@ -33,7 +34,7 @@
                 education by providing quality education to distressed kids
                 .Their families will be benefited from this project too.
               </p>
-              <b-btn
+              <b-btn style="font-family: fantasy"
                 >Join us <font-awesome-icon icon="fa-solid fa-arrow-right"
               /></b-btn>
             </div>
@@ -55,15 +56,27 @@ export default {
 };
 </script>
 <style scoped>
-.formatutube {
-  margin-top: 10px;
-  margin-bottom: 5px;
+h3 {
+  font-family: fantasy;
 }
+p {
+  font-family: cursive;
+}
+.formathr {
+  height: 4px;
+  width: 20%;
+  border-width: 0;
+  background-color: red;
+}
+/* .formatutube {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
 .formatbody {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
 }
 </style>
