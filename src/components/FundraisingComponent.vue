@@ -25,13 +25,13 @@
               {{ item.totalmount }}
             </h6>
             <p>{{ item.message }}</p>
-            <div class="row">
-              <div class="col-6">
+            <b-row>
+              <b-col>
                 <b-btn lg variant="outline-danger" style="font-family: fantasy"
                   >Donate</b-btn
                 >
-              </div>
-              <div class="col-6 abc">
+              </b-col>
+              <b-col class="abc">
                 <div class="likealign">
                   <font-awesome-icon
                     icon="fa-regular fa-heart"
@@ -56,8 +56,8 @@
                     size="lg"
                   />
                 </div>
-              </div>
-            </div>
+              </b-col>
+            </b-row>
           </b-card-text>
         </b-card>
       </b-card-group>
@@ -143,7 +143,7 @@ export default {
 <style scoped>
 .formatheading {
   margin-top: 10px;
-  max-height: 70px;
+  /* max-height: 70px; */
 }
 h4 {
   font-family: math;
@@ -168,5 +168,13 @@ p {
 }
 .formatcardimg {
   max-height: 300px;
+}
+@media screen and (max-width: 485px) {
+  .abc {
+    display: flex;
+    cursor: pointer;
+    justify-content: space-evenly;
+    margin-top: 5px;
+  }
 }
 </style>

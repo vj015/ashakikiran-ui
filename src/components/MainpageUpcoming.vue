@@ -1,7 +1,7 @@
 <template>
   <div class="container mt-4" style="border: 0.5px solid rgb(0 0 0 / 18%)">
     <b-row>
-      <b-col class="md-6">
+      <b-col>
         <h2>Upcoming Events</h2>
         <hr class="formathr" />
         <b-card
@@ -30,7 +30,7 @@
           </b-card-body>
         </b-card>
       </b-col>
-      <b-col class="md-6">
+      <b-col>
         <h2>Featured Fundraise</h2>
         <hr class="formathr" />
         <FundraisingComponent :renderinmain="this.flag" />
