@@ -54,7 +54,9 @@
       </div>
       <div class="col-6 adj">
         <img src="../assets/AshaKiKiran_logo.webp" alt="Logo" class="logo1" />
-        <div class="akk">Asha Ki Kiran</div>
+        <div class="akk" style="font-family: fantasy; color: #ff0003">
+          Asha Ki Kiran
+        </div>
       </div>
       <div class="col-4 formatdonate">
         <b-button style="font-family: fantasy" class="mob-btn">Donate</b-button>
@@ -138,6 +140,7 @@ export default {
   top: 30px;
   font-size: large;
   left: 25px;
+  color: #ff0003;
 }
 .akk {
   font-weight: bold;

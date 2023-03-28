@@ -1,15 +1,36 @@
 <template>
   <div id="navigation-mobile">
-    <ul>
-      <li @click="handleredirect1('/')">Home</li>
-      <li @click="handleredirect1('/about')">About us</li>
-      <li @click="handleredirect1('/work?events=true')">Celebrate with us</li>
-      <li @click="handleredirect1('/work?fundraising=true')">Fundraisings</li>
-      <li @click="handleredirect1('/register?member=true')">Membership</li>
-      <li @click="handleredirect1('/register?intern=true')">Internships</li>
-      <li @click="handleredirect1('/contactus')">Contact us</li>
-      <li @click="handleredirect1('/login')">Login</li>
-    </ul>
+    <div>
+      <ul>
+        <li @click="handleredirect1('/')">
+          Home
+          <font-awesome-icon icon="fa-solid fa-house-user" />
+        </li>
+        <li @click="handleredirect1('/about')">
+          About us <font-awesome-icon icon="fa-solid fa-building-ngo" />
+        </li>
+        <li @click="handleredirect1('/work?events=true')">
+          Events with us <font-awesome-icon icon="fa-solid fa-calendar-days" />
+        </li>
+        <li @click="handleredirect1('/work?fundraising=true')">
+          Fundraisings
+          <font-awesome-icon icon="fa-solid fa-hand-holding-dollar" />
+        </li>
+        <li @click="handleredirect1('/register?member=true')">
+          Membership <font-awesome-icon icon="fa-solid fa-circle-arrow-right" />
+        </li>
+        <li @click="handleredirect1('/register?intern=true')">
+          Internships
+          <font-awesome-icon icon="fa-solid fa-circle-arrow-right" />
+        </li>
+        <li @click="handleredirect1('/contactus')">
+          Contact us <font-awesome-icon icon="fa-solid fa-address-card" />
+        </li>
+        <li @click="handleredirect1('/login')">
+          Login <font-awesome-icon icon="fa-solid fa-right-to-bracket" />
+        </li>
+      </ul>
+    </div>
     <div class="social-media">
       <font-awesome-icon icon="fa-brands fa-facebook" class="ic" />
       <font-awesome-icon icon="fa-brands fa-instagram" class="ic" />
@@ -33,6 +54,9 @@ export default {
 <style scoped>
 #navigation-mobile {
   padding: 20px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 100px;
 }
 #navigation-mobile ul {
   list-style: none;
@@ -50,11 +74,10 @@ export default {
   color: #111;
 }
 .social-media {
-  position: relative;
-  left: 40px;
-  bottom: 0px;
+  margin: auto;
 }
 .ic {
   margin: 0 20px 0 0;
+  font-size: x-large;
 }
 </style>

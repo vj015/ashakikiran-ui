@@ -35,6 +35,14 @@ import {
   faLocationPin,
   faCalendarDays,
   faMessage,
+  faCircleArrowRight,
+  faBuildingNgo,
+  faHandHoldingDollar,
+  faRightToBracket,
+  faArrowUpRightFromSquare,
+  faAddressCard,
+  faHouseChimneyUser,
+  faHouseUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { faHeart as liked } from "@fortawesome/free-regular-svg-icons";
 import {
@@ -61,7 +69,16 @@ library.add(
   faHandsHoldingChild,
   faLocationPin,
   faCalendarDays,
-  faMessage
+  faMessage,
+  faCircleArrowRight,
+  faBuildingNgo,
+  faHandHoldingDollar,
+  faRightToBracket,
+  faArrowUpRightFromSquare,
+  faAddressCard,
+  faRightToBracket,
+  faHouseChimneyUser,
+  faHouseUser
 );
 library.add(faBars);
 library.add(faUser, faXmark, faHeart, faThumbsUp, faShareFromSquare);

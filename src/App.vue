@@ -44,6 +44,13 @@ export default {
 };
 </script>
 <style>
+/* .headerstl {
+  position: fixed;
+  z-index: 99;
+}
+.bodystl {
+  z-index: 100;
+} */
 #app {
   position: relative;
 }
