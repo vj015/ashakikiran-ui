@@ -80,7 +80,8 @@ library.add(
   faRightToBracket,
   faHouseChimneyUser,
   faHouseUser,
-  faCircleXmark
+  faCircleXmark,
+  faHeart
 );
 library.add(faBars);
 library.add(faUser, faXmark, faHeart, faThumbsUp, faShareFromSquare);

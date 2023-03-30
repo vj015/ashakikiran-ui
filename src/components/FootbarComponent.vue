@@ -43,17 +43,12 @@
     <div class="footer-right">
       <div class="footer-company-about">
         <span>Send us a message</span>
-        <b-form-input
-          v-model="text"
-          placeholder=" Full Name"
-          class="mt-2"
-        ></b-form-input>
+        <b-form-input placeholder=" Full Name" class="mt-2"></b-form-input>
         <b-input-group prepend="+91" class="mt-2 mr-sm-2 mb-sm-0">
           <b-form-input id="mobile" placeholder="Mobile Number"></b-form-input>
         </b-input-group>
         <b-form-textarea
           id="textarea"
-          v-model="msg"
           placeholder="Message"
           rows="3"
           max-rows="6"

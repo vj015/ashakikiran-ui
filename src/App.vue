@@ -16,12 +16,14 @@
       <router-view />
     </div>
     <div class="footerstl" v-if="!this.showsidebar"><FootbarComponent /></div>
+    <div><SelfComponent v-if="!this.showsidebar" /></div>
   </div>
 </template>
 <script>
 import NavbarComponent from "./components/NavbarComponent.vue";
 import FootbarComponent from "./components/FootbarComponent.vue";
 import MobileNav from "./components/MobileNav.vue";
+import SelfComponent from "./components/SelfComponent.vue";
 export default {
   data() {
     return {
@@ -32,6 +34,7 @@ export default {
     NavbarComponent,
     FootbarComponent,
     MobileNav,
+    SelfComponent,
   },
   methods: {
     togglesidebar(res) {

@@ -29,7 +29,7 @@
             >Contact
           </b-nav-item>
           <b-nav-item href="/login" class="formatnavtabs"
-            ><font-awesome-icon icon="fa-solid fa-circle-user" size="lg" beat />
+            ><font-awesome-icon icon="fa-solid fa-circle-user" size="lg" />
           </b-nav-item>
         </b-nav>
       </div>

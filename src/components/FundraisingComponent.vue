@@ -17,7 +17,6 @@
               :value="item.currentamount"
               :max="item.totalmount"
               variant="danger"
-              animated="true"
               class="mt-1 mb-1"
             ></b-progress>
             <h6>
