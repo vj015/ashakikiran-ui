@@ -21,11 +21,13 @@
                     @blur="verifyusername()"
                   ></b-form-input>
                   <b-alert show variant="danger" v-if="this.showwarning"
-                    >Invalid Username
-                    <font-awesome-icon
+                    ><font-awesome-icon
                       icon="fa-solid fa-circle-xmark"
                       style="color: rgb(132 32 41)"
-                  /></b-alert>
+                    />
+                    Invalid Username. Click here to
+                    <RouterLink to="/register?member=true">Register</RouterLink>
+                  </b-alert>
                   <b-alert show variant="success" v-if="!this.unregistereduser"
                     >Verified
                     <font-awesome-icon
@@ -48,8 +50,11 @@
                     variant="dark"
                     :disabled="this.unregistereduser"
                     style="font-family: fantasy"
-                    >Login</b-button
-                  >
+                    >Login
+                    <font-awesome-icon
+                      icon="fa-solid fa-right-to-bracket"
+                      style="color: #030303"
+                  /></b-button>
                 </div>
               </div>
             </b-card-text>
@@ -135,12 +140,18 @@ export default {
             this.unregistereduser = true;
             console.log(err);
           });
+      } else {
+        this.showwarning = false;
+        this.unregistereduser = true;
       }
     },
   },
 };
 </script>
 <style scoped>
+a {
+  color: #842029;
+}
 .alert {
   padding: 0px;
   padding-left: 10px;

@@ -84,7 +84,8 @@ library.add(
   faCircleXmark,
   faHeart,
   faCheckCircle,
-  faCircleXmark
+  faCircleXmark,
+  faRightToBracket
 );
 library.add(faBars);
 library.add(faUser, faXmark, faHeart, faThumbsUp, faShareFromSquare);
