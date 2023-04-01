@@ -7,12 +7,10 @@
     <MainpageUpcoming />
     <DonateComponent />
     <TestimonialComponent src="https://www.youtube.com/embed/bO0oHSqGfYA" />
-    <button @click="getuser()">USER</button>
   </div>
 </template>
 
 <script>
-import { loginuser } from "@/api";
 import IntroComponent from "@/components/IntroComponent.vue";
 import AboutComponent from "@/components/AboutComponent.vue";
 import DonateComponent from "@/components/DonateComponent.vue";
@@ -39,12 +37,7 @@ export default {
     WallComponent,
     MainpageUpcoming,
   },
-  methods: {
-    async getuser() {
-      console.log("Request is reaching get user in home view");
-      await loginuser(JSON.stringify(this.user));
-    },
-  },
+  methods: {},
 };
 </script>
 <style scoped></style>
