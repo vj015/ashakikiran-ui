@@ -62,11 +62,16 @@
         <hr class="formathr" />
         <b-card style="border: none">
           <div>
-            <b-form-input placeholder=" Full Name" class="mt-2"></b-form-input>
+            <b-form-input
+              placeholder=" Full Name"
+              class="mt-2"
+              v-model="form.name"
+            ></b-form-input>
             <b-input-group prepend="+91" class="mt-2 mr-sm-2 mb-sm-0">
               <b-form-input
                 id="mobile"
                 placeholder="Mobile Number"
+                v-model="form.number"
               ></b-form-input>
             </b-input-group>
             <b-form-textarea
@@ -75,10 +80,12 @@
               rows="3"
               max-rows="6"
               class="mt-2 mb-2"
+              v-model="form.msg"
             ></b-form-textarea>
             <b-button
               class="stylbtn"
               style="font-family: fantasy; border: none; color: black"
+              @click="sendsms()"
               >Send</b-button
             >
           </div>
@@ -87,6 +94,54 @@
     </b-row>
   </div>
 </template>
+<script>
+import swal from "sweetalert";
+import router from "@/router";
+import AuthenticationServices from "../Services/AuthenticationServices";
+export default {
+  data() {
+    return {
+      form: {
+        name: "",
+        msg: "",
+        number: "",
+      },
+    };
+  },
+  methods: {
+    sendsms() {
+      console.log("Sending sms");
+      AuthenticationServices.sendsms(JSON.stringify(this.form))
+        .then((res) => {
+          if (res.status === 200) {
+            this.form.number = "";
+            this.form.msg = "";
+            this.form.name = "";
+            console.log("Success");
+            swal({
+              title: "Message Sent successfully!",
+              icon: "success",
+            }).then(() => {
+              router.push("/contactus");
+            });
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+          this.form.number = "";
+          this.form.msg = "";
+          this.form.name = "";
+          swal({
+            title: "Failed to Send Message.Try after some time!",
+            icon: "error",
+          }).then(() => {
+            router.push("/");
+          });
+        });
+    },
+  },
+};
+</script>
 <style scoped>
 .maindiv {
   display: flex;
