@@ -50,5 +50,16 @@ class AuthenticationServices {
       },
     });
   }
+  getuserdetails(token) {
+    return axios.get("http://localhost:8081/user/loggedinuser", {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods":
+          "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + token,
+      },
+    });
+  }
 }
 export default new AuthenticationServices();

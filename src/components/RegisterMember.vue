@@ -176,13 +176,44 @@ export default {
   methods: {
     register() {
       console.log("User Registration method");
+      const form1 = {
+        username: this.form.cnumber,
+        password: this.form.password,
+      };
       AuthenticationServices.registeruser(JSON.stringify(this.form))
         .then((res) => {
           if (res.status === 201) {
-            // sessionStorage.setItem("frJWT", res.data.token);
-            // this.form.username = "";
-            // this.form.password = "";
             console.log("Success");
+            console.log(JSON.stringify(form1));
+            AuthenticationServices.loginuser(JSON.stringify(form1))
+              .then((res) => {
+                if (res.status === 200) {
+                  sessionStorage.setItem("frJWT", res.data.token);
+                  AuthenticationServices.getuserdetails(res.data.token)
+                    .then((res) => {
+                      console.log(res);
+                      sessionStorage.setItem(
+                        "username",
+                        "User_" + res.data.name
+                      );
+                      sessionStorage.setItem(
+                        "authrole",
+                        "FIRAuthDataResult" + res.data.authrole
+                      );
+                      sessionStorage.setItem("id", "UserIDIN" + res.data.id);
+                      sessionStorage.setItem(
+                        "userid",
+                        "INNNNNNNNN" + res.data.loggedinNumber
+                      );
+                    })
+                    .catch((err) => {
+                      console.log(err);
+                    });
+                }
+              })
+              .catch((err) => {
+                console.log(err);
+              });
             swal({
               title: "Successfully Registered!",
               icon: "success",

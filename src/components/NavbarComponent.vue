@@ -18,7 +18,7 @@
             >
           </b-nav-item-dropdown>
           <b-nav-item-dropdown text="Register" class="formatnavtabs" right>
-            <b-dropdown-item href="/register?member=true"
+            <b-dropdown-item href="/register?member=true" v-if="!this.loggedin"
               >Register as Member</b-dropdown-item
             >
             <b-dropdown-item href="/register?intern=true"
@@ -28,8 +28,15 @@
           <b-nav-item href="/contactus" class="formatnavtabs"
             >Contact
           </b-nav-item>
-          <b-nav-item href="/login" class="formatnavtabs"
+          <b-nav-item href="/login" class="formatnavtabs" v-if="!this.loggedin"
             ><font-awesome-icon icon="fa-solid fa-circle-user" size="lg" />
+          </b-nav-item>
+          <b-nav-item
+            href="/userprofile"
+            class="formatnavtabs"
+            v-if="this.loggedin"
+          >
+            {{ this.username }}
           </b-nav-item>
         </b-nav>
       </div>
@@ -96,6 +103,8 @@ export default {
       mobileview: false,
       mobileWidth: window.innerWidth,
       mobilesm: false,
+      loggedin: false,
+      username: "",
     };
   },
   methods: {
@@ -106,16 +115,32 @@ export default {
     opensummary() {
       this.$emit("togglesidebar");
     },
+    login() {
+      if (sessionStorage.getItem("username")) {
+        this.loggedin = true;
+        this.username = sessionStorage.getItem("username").substring(5);
+      } else {
+        this.loggedin = false;
+        this.username = "";
+      }
+    },
   },
   mounted() {
     this.handlemobileview();
+    this.login();
   },
   created() {
     window.addEventListener("resize", this.handlemobileview);
+    this.login();
   },
 
   beforeDestroy() {
     window.removeEventListener("resize", this.handlemobileview);
+  },
+  watch: {
+    $route: function () {
+      this.login();
+    },
   },
 };
 </script>

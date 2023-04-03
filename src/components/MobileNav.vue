@@ -16,7 +16,10 @@
           Fundraisings
           <font-awesome-icon icon="fa-solid fa-hand-holding-dollar" />
         </li>
-        <li @click="handleredirect1('/register?member=true')">
+        <li
+          @click="handleredirect1('/register?member=true')"
+          v-if="!this.loggedin"
+        >
           Membership <font-awesome-icon icon="fa-solid fa-circle-arrow-right" />
         </li>
         <li @click="handleredirect1('/register?intern=true')">
@@ -26,8 +29,14 @@
         <li @click="handleredirect1('/contactus')">
           Contact us <font-awesome-icon icon="fa-solid fa-address-card" />
         </li>
-        <li @click="handleredirect1('/login')">
+        <li @click="handleredirect1('/login')" v-if="!this.loggedin">
           Login <font-awesome-icon icon="fa-solid fa-right-to-bracket" />
+        </li>
+        <li @click="handleredirect1('/userloggedin')" v-if="this.loggedin">
+          {{ "Hi " + this.username + "!" }}
+        </li>
+        <li @click="logout()" v-if="this.loggedin">
+          Logout <font-awesome-icon icon="fa-solid fa-right-to-bracket" />
         </li>
       </ul>
     </div>
@@ -41,11 +50,71 @@
 </template>
 
 <script>
+import swal from "sweetalert";
 export default {
   name: "MobileNav",
+  data() {
+    return {
+      loggedin: false,
+      username: "",
+    };
+  },
   methods: {
     handleredirect1(str) {
       this.$emit("togglesidebar", str);
+    },
+    login() {
+      if (sessionStorage.getItem("username")) {
+        this.loggedin = true;
+        this.username = sessionStorage.getItem("username").substring(5);
+      } else {
+        this.loggedin = false;
+        this.username = "";
+      }
+    },
+    logout() {
+      swal({
+        title: "Are you sure?",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      }).then((willDelete) => {
+        if (willDelete) {
+          sessionStorage.removeItem("frJWT");
+          sessionStorage.removeItem("username");
+          sessionStorage.removeItem("userid");
+          sessionStorage.removeItem("authrole");
+          sessionStorage.removeItem("id");
+          this.loggedin = false;
+          this.username = "";
+          swal("Logged Out!", {
+            icon: "success",
+          });
+        }
+      });
+      // swal({
+      //   title: "Are you sure you want to Logout?",
+      //   icon: "success",
+      // }).then(() => {
+      //   sessionStorage.removeItem("frJWT");
+      //   sessionStorage.removeItem("username");
+      //   sessionStorage.removeItem("userid");
+      //   sessionStorage.removeItem("authrole");
+      //   sessionStorage.removeItem("id");
+      //   this.loggedin = false;
+      //   this.username = "";
+      // });
+    },
+  },
+  mounted() {
+    this.login();
+  },
+  created() {
+    this.login();
+  },
+  watch: {
+    $route: function () {
+      this.login();
     },
   },
 };

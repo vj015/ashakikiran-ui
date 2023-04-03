@@ -88,6 +88,23 @@ export default {
             sessionStorage.setItem("frJWT", res.data.token);
             this.form.username = "";
             this.form.password = "";
+            AuthenticationServices.getuserdetails(res.data.token)
+              .then((res) => {
+                console.log(res);
+                sessionStorage.setItem("username", "User_" + res.data.name);
+                sessionStorage.setItem(
+                  "authrole",
+                  "FIRAuthDataResult" + res.data.authrole
+                );
+                sessionStorage.setItem("id", "UserIDIN" + res.data.id);
+                sessionStorage.setItem(
+                  "userid",
+                  "INNNNNNNNN" + res.data.loggedinNumber
+                );
+              })
+              .catch((err) => {
+                console.log(err);
+              });
             swal({
               title: "Successfully Logged in",
               icon: "success",
