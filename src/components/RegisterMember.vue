@@ -14,9 +14,8 @@
               ><font-awesome-icon
                 icon="fa-solid fa-circle-xmark"
                 style="color: rgb(132 32 41)"
-              />Entered Contact number is already registered. <br />Click here
-              to
-              <RouterLink to="/login">Login</RouterLink>
+              />Entered Contact number is already registered.Use another number
+              to register
             </b-alert>
             <b-alert show variant="success" v-if="this.verifiedusername"
               >Verified
