@@ -13,7 +13,7 @@
       >
         <h3 class="heading">{{ "Asha Ki Kiran" }}</h3>
         <p class="title">{{ image.title }}</p>
-        <b-btn style="font-family: fantasy; border: none"
+        <b-btn style="font-family: fantasy; border: none" @click="redirect()"
           >Explore More <font-awesome-icon icon="fa-solid fa-arrow-right"
         /></b-btn>
       </b-carousel-slide>
@@ -57,6 +57,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    redirect() {
+      this.$router.push("/about");
+    },
   },
 };
 </script>

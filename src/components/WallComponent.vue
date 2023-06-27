@@ -10,8 +10,9 @@
           <br />
           <hr class="formathr" />
           <p>
-            Dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib
-            ulum mauris quis aliquam. Lorem ipsum dolor sit amet.
+            "Every child deserves a chance to shine, to dream, and to grow. Let
+            us join hands and ensure that no child is left behind, for they are
+            the future we hold in our hearts."
           </p>
         </div>
       </b-col>
@@ -24,7 +25,7 @@
             class="formatcard"
           >
             <b-card-text class="text-center">
-              <h2>{{ "500" }}</h2>
+              <h2>{{ "500+" }}</h2>
               <h6>{{ "Children Helped" }}</h6>
             </b-card-text>
           </b-card>
@@ -36,7 +37,7 @@
             class="formatcard"
           >
             <b-card-text class="text-center">
-              <h2>{{ "50" }}</h2>
+              <h2>{{ "50+" }}</h2>
               <h6>{{ "Charity Schools" }}</h6>
             </b-card-text>
           </b-card>
@@ -48,7 +49,7 @@
             class="formatcard"
           >
             <b-card-text class="text-center">
-              <h2>{{ "2000" }}</h2>
+              <h2>{{ "2000+" }}</h2>
               <h6>{{ "Volunteers Community" }}</h6>
             </b-card-text>
           </b-card>

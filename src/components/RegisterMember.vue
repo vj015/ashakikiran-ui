@@ -1,137 +1,133 @@
 <template>
   <b-card no-body class="overflow-hidden">
-    <b-row no-gutters>
-      <b-col md="7" class="formatimg">
+    <!-- <b-col md="7" class="formatimg">
         <b-card-img
           :src="require('../assets/images/login.webp')"
           alt="Image"
           class="rounded-0"
         ></b-card-img>
-      </b-col>
-      <b-col md="5">
-        <b-card-body>
-          <b-card-text>
-            <div>
-              <div class="m-4">
-                <b-form-group>
-                  <b-form-input
-                    type="number"
-                    placeholder="Enter your contact number"
-                    v-model="form.cnumber"
-                    @blur="verifyusername()"
-                  ></b-form-input>
-                  <b-alert show variant="danger" v-if="this.showwarning"
-                    ><font-awesome-icon
-                      icon="fa-solid fa-circle-xmark"
-                      style="color: rgb(132 32 41)"
-                    />Entered Contact number is already registered. <br />Click
-                    here to
-                    <RouterLink to="/login">Login</RouterLink>
-                  </b-alert>
-                  <b-alert show variant="success" v-if="this.verifiedusername"
-                    >Verified
-                    <font-awesome-icon
-                      icon="fa-solid fa-circle-check"
-                      style="color: rgb(15 81 50)"
-                  /></b-alert>
-                </b-form-group>
-              </div>
-              <div class="m-4">
-                <b-form-input
-                  type="text"
-                  placeholder="Enter your name"
-                  v-model="form.name"
-                ></b-form-input>
-              </div>
-              <div class="m-4">
-                <b-form-input
-                  type="number"
-                  placeholder="Enter your whatsapp number"
-                  v-model="form.wnumber"
-                ></b-form-input>
-              </div>
-              <div class="m-4">
-                <b-form-datepicker
-                  :max="max"
-                  locale="en"
-                  v-model="demodob"
-                  placeholder="Enter your date of birth"
-                  @blur="setdob()"
-                ></b-form-datepicker>
-              </div>
-              <div class="m-4">
-                <b-form-select
-                  v-model="form.gender"
-                  :options="options"
-                ></b-form-select>
-              </div>
-              <div class="m-4">
-                <b-form-input
-                  type="text"
-                  placeholder="Enter your address"
-                  v-model="form.address"
-                ></b-form-input>
-              </div>
-              <div class="m-4">
-                <b-form-input
-                  type="text"
-                  placeholder="Enter your city"
-                  v-model="form.city"
-                ></b-form-input>
-              </div>
-              <div class="m-4">
-                <b-form-input
-                  type="password"
-                  placeholder="Enter your password"
-                  v-model="pass"
-                  @blur="passcheck()"
-                ></b-form-input>
-              </div>
-              <div class="m-4">
-                <b-form-input
-                  type="password"
-                  placeholder="Confirm your password"
-                  v-model="cpass"
-                  @blur="passcheck()"
-                ></b-form-input>
-                <b-alert show variant="danger" v-if="this.showpassmismatch"
-                  ><font-awesome-icon
-                    icon="fa-solid fa-circle-xmark"
-                    style="color: rgb(132 32 41)"
-                  />
-                  Password Mismatch. Confirm password correctly.</b-alert
-                >
-                <b-alert show variant="success" v-if="this.showpasssuccess"
-                  >Password Verified
-                  <font-awesome-icon
-                    icon="fa-solid fa-circle-check"
-                    style="color: rgb(15 81 50)"
-                /></b-alert>
-              </div>
-              <div class="m-4">
-                <b-form-checkbox
-                  id="checkbox-1"
-                  name="checkbox-1"
-                  @change="togglebtn()"
-                >
-                  I agree to support the NGO and be its member
-                </b-form-checkbox>
-              </div>
-              <div
-                class="m-4 d-flex flex-column justify-content-center align-items-center"
-              >
-                <b-button
-                  :disabled="verifypass || !verifiedusername || !tnc"
-                  variant="dark"
-                  @click="register()"
-                  >Register</b-button
-                >
-              </div>
-            </div>
-          </b-card-text>
-        </b-card-body>
-      </b-col>
-    </b-row>
+      </b-col> -->
+    <b-card-body>
+      <b-card-text>
+        <div>
+          <div class="m-4">
+            <b-form-group>
+              <b-form-input
+                type="number"
+                placeholder="Enter your contact number"
+                v-model="form.cnumber"
+                @blur="verifyusername()"
+              ></b-form-input>
+              <b-alert show variant="danger" v-if="this.showwarning"
+                ><font-awesome-icon
+                  icon="fa-solid fa-circle-xmark"
+                  style="color: rgb(132 32 41)"
+                />Entered Contact number is already registered. <br />Click here
+                to
+                <RouterLink to="/login">Login</RouterLink>
+              </b-alert>
+              <b-alert show variant="success" v-if="this.verifiedusername"
+                >Verified
+                <font-awesome-icon
+                  icon="fa-solid fa-circle-check"
+                  style="color: rgb(15 81 50)"
+              /></b-alert>
+            </b-form-group>
+          </div>
+          <div class="m-4">
+            <b-form-input
+              type="text"
+              placeholder="Enter your name"
+              v-model="form.name"
+            ></b-form-input>
+          </div>
+          <div class="m-4">
+            <b-form-input
+              type="number"
+              placeholder="Enter your whatsapp number"
+              v-model="form.wnumber"
+            ></b-form-input>
+          </div>
+          <div class="m-4">
+            <b-form-datepicker
+              :max="max"
+              locale="en"
+              v-model="demodob"
+              placeholder="Enter your date of birth"
+              @blur="setdob()"
+            ></b-form-datepicker>
+          </div>
+          <div class="m-4">
+            <b-form-select
+              v-model="form.gender"
+              :options="options"
+            ></b-form-select>
+          </div>
+          <div class="m-4">
+            <b-form-input
+              type="text"
+              placeholder="Enter your address"
+              v-model="form.address"
+            ></b-form-input>
+          </div>
+          <div class="m-4">
+            <b-form-input
+              type="text"
+              placeholder="Enter your city"
+              v-model="form.city"
+            ></b-form-input>
+          </div>
+          <div class="m-4">
+            <b-form-input
+              type="password"
+              placeholder="Enter your password"
+              v-model="pass"
+              @blur="passcheck()"
+            ></b-form-input>
+          </div>
+          <div class="m-4">
+            <b-form-input
+              type="password"
+              placeholder="Confirm your password"
+              v-model="cpass"
+              @blur="passcheck()"
+            ></b-form-input>
+            <b-alert show variant="danger" v-if="this.showpassmismatch"
+              ><font-awesome-icon
+                icon="fa-solid fa-circle-xmark"
+                style="color: rgb(132 32 41)"
+              />
+              Password Mismatch. Confirm password correctly.</b-alert
+            >
+            <b-alert show variant="success" v-if="this.showpasssuccess"
+              >Password Verified
+              <font-awesome-icon
+                icon="fa-solid fa-circle-check"
+                style="color: rgb(15 81 50)"
+            /></b-alert>
+          </div>
+          <div class="m-4">
+            <b-form-checkbox
+              id="checkbox-1"
+              name="checkbox-1"
+              @change="togglebtn()"
+            >
+              I agree to support the NGO and be its member
+            </b-form-checkbox>
+          </div>
+          <div
+            class="m-4 d-flex flex-column justify-content-center align-items-center"
+          >
+            <b-button
+              :disabled="verifypass || !verifiedusername || !tnc"
+              variant="danger"
+              @click="register()"
+              >Register</b-button
+            >
+          </div>
+        </div>
+      </b-card-text>
+    </b-card-body>
   </b-card>
 </template>
 <script>

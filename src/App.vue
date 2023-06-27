@@ -1,10 +1,5 @@
 <template>
   <div id="app">
-    <!-- <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view /> -->
     <div class="headerstl">
       <NavbarComponent
         @togglesidebar="togglesidebar"
@@ -12,6 +7,9 @@
       />
     </div>
     <MobileNav @togglesidebar="togglesidebar" v-if="this.showsidebar" />
+    <div class="whatsapp">
+      <WhatsappComponent />
+    </div>
     <div class="bodystl" v-if="!this.showsidebar">
       <router-view />
     </div>
@@ -24,6 +22,7 @@ import NavbarComponent from "./components/NavbarComponent.vue";
 import FootbarComponent from "./components/FootbarComponent.vue";
 import MobileNav from "./components/MobileNav.vue";
 import SelfComponent from "./components/SelfComponent.vue";
+import WhatsappComponent from "./components/WhatsappComponent.vue";
 export default {
   data() {
     return {
@@ -35,6 +34,7 @@ export default {
     FootbarComponent,
     MobileNav,
     SelfComponent,
+    WhatsappComponent,
   },
   methods: {
     togglesidebar(res) {
@@ -60,5 +60,12 @@ export default {
 .bodystl {
   width: 100%;
   height: auto;
+  z-index: 2;
+}
+.whatsapp {
+  position: fixed;
+  right: 2.5%;
+  top: 80%;
+  z-index: 4;
 }
 </style>

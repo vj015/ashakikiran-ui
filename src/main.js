@@ -45,6 +45,7 @@ import {
   faHouseUser,
   faCircleXmark,
   faCheckCircle,
+  faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
 import { faHeart as liked } from "@fortawesome/free-regular-svg-icons";
 import {
@@ -85,7 +86,8 @@ library.add(
   faHeart,
   faCheckCircle,
   faCircleXmark,
-  faRightToBracket
+  faRightToBracket,
+  faPaperPlane
 );
 library.add(faBars);
 library.add(faUser, faXmark, faHeart, faThumbsUp, faShareFromSquare);

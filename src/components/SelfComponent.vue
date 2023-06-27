@@ -2,16 +2,12 @@
   <div class="text-center">
     <b-alert show variant="danger"
       ><p class="alert-link">
-        This website is designed, developed and maintained with
-        <font-awesome-icon
-          icon="fa-solid fa-heart"
-          style="color: color: rgb(255, 219, 111);"
-        />
-        by
-        <a href="https://www.linkedin.com/in/vipul-jain-io/">Vipul.</a>
-        <br />Contact for more freelance projects.
-      </p></b-alert
-    >
+        <a href="https://www.linkedin.com/in/vipul-jain-io/"
+          >This website is designed, developed and maintained by Vipul.
+          <br />Contact for more
+          <font-awesome-icon icon="fa-solid fa-paper-plane"
+        /></a></p
+    ></b-alert>
   </div>
 </template>
 <style scoped>

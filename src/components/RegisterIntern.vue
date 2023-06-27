@@ -1,18 +1,7 @@
 <template>
-  <!-- { "id":3, "name":"Rajesh", "address":"Karhal", "gender":"MAle",
-  "city":"Lucknow", "pincode":"208001", "state":"UP", "reason":"reason1",
-  "email":"hfhfh@ndjhjdjd.com", "cnumber":9076545269, "wnumber":99999999,
-  "education":"MA", "college":"MMMUT", "expertise":"Dancing", "dob":"100588" } -->
   <b-card no-body class="overflow-hidden">
     <b-row no-gutters>
-      <b-col md="7" class="formatimg">
-        <b-card-img
-          :src="require('../assets/images/demo.webp')"
-          alt="Image"
-          class="rounded-0"
-        ></b-card-img>
-      </b-col>
-      <b-col md="5">
+      <b-col>
         <b-card-body>
           <b-card-text>
             <div>
@@ -122,7 +111,7 @@
                 class="m-4 d-flex flex-column justify-content-center align-items-center"
               >
                 <b-button
-                  variant="dark"
+                  variant="danger"
                   :disabled="!tnc"
                   @click="registerintern()"
                   >Apply</b-button

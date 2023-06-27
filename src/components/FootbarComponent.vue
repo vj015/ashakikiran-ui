@@ -6,11 +6,11 @@
       <p class="footer-links">
         <a href="#">Home</a>
         |
-        <a href="#">About</a>
+        <a href="/about">About</a>
         |
-        <a href="#">Fundraisings</a>
+        <a href="/work?fundraising=true">Fundraisings</a>
         |
-        <a href="#">Celebrate with us</a>
+        <a href="/work?events=true">Celebrate with us</a>
       </p>
 
       <p class="footer-company-name">
@@ -37,6 +37,7 @@
       <b-button
         class="stylbtn mt-4"
         style="font-family: fantasy; border: none; color: #ffdb6f"
+        @click="redirect()"
         >Donate us!</b-button
       >
     </div>
@@ -71,11 +72,18 @@
         >
       </div>
       <div class="footer-icons">
-        <a href="#"><font-awesome-icon icon="fa-brands fa-facebook" /></a>
-        <a href="#"><font-awesome-icon icon="fa-brands fa-instagram" /></a>
-        <a href="#"><font-awesome-icon icon="fa-brands fa-linkedin" /></a>
-        <a href="#"><font-awesome-icon icon="fa-brands fa-twitter" /></a>
-        <a href="#"><font-awesome-icon icon="fa-brands fa-youtube" /></a>
+        <a href="https://www.facebook.com/profile.php?id=100093668083368"
+          ><font-awesome-icon icon="fa-brands fa-facebook"
+        /></a>
+        <a href="https://www.instagram.com/ashakikiranfoundation/"
+          ><font-awesome-icon icon="fa-brands fa-instagram"
+        /></a>
+        <a href="https://www.linkedin.com/in/vipul-jain-io/"
+          ><font-awesome-icon icon="fa-brands fa-linkedin"
+        /></a>
+        <a href="https://www.youtube.com/@ashakikiranfreeeducation"
+          ><font-awesome-icon icon="fa-brands fa-youtube"
+        /></a>
       </div>
     </div>
   </footer>
@@ -125,6 +133,9 @@ export default {
             router.push("/");
           });
         });
+    },
+    redirect() {
+      this.$router.push({ name: "Donate" });
     },
   },
 };

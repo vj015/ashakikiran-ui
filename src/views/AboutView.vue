@@ -34,7 +34,7 @@
                 education by providing quality education to distressed kids
                 .Their families will be benefited from this project too.
               </p>
-              <b-btn style="font-family: fantasy"
+              <b-btn style="font-family: fantasy" @click="redirect()"
                 >Join us <font-awesome-icon icon="fa-solid fa-arrow-right"
               /></b-btn>
             </div>
@@ -52,6 +52,11 @@ export default {
   },
   components: {
     TestimonialComponent,
+  },
+  methods: {
+    redirect() {
+      this.$router.push("/register?member=true");
+    },
   },
 };
 </script>

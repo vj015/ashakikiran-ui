@@ -29,7 +29,10 @@
                   project too.
                 </p>
                 <div>
-                  <b-btn class="explore" style="font-family: fantasy"
+                  <b-btn
+                    class="explore"
+                    style="font-family: fantasy"
+                    @click="redirect()"
                     >Explore More
                     <font-awesome-icon icon="fa-solid fa-arrow-right"
                   /></b-btn>
@@ -42,6 +45,16 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  methods: {
+    redirect() {
+      console.log("kkjkkj");
+      this.$router.push("/about");
+    },
+  },
+};
+</script>
 <style scoped>
 h3 {
   font-family: fantasy;

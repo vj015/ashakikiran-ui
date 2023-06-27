@@ -13,24 +13,31 @@
             <div class="d-flex justify-content-center formatheading">
               <h4>{{ item.title }}</h4>
             </div>
-            <b-progress
+            <!-- <b-progress
               :value="item.currentamount"
               :max="item.totalmount"
               variant="danger"
               class="mt-1 mb-1"
-            ></b-progress>
-            <h6>
+            ></b-progress> -->
+            <!-- <h6>
               Raised {{ item.currentamount }} of
               {{ item.totalmount }}
-            </h6>
+            </h6> -->
             <p>{{ item.message }}</p>
             <b-row>
               <b-col>
-                <b-btn lg variant="outline-danger" style="font-family: fantasy"
+                <!-- <b-btn lg variant="outline-danger" style="font-family: fantasy"
                   >Donate</b-btn
+                > -->
+                <b-button
+                  block
+                  variant="danger"
+                  style="font-family: fantasy"
+                  @click="redirect()"
+                  >Donate</b-button
                 >
               </b-col>
-              <b-col class="abc">
+              <!-- <b-col class="abc">
                 <div class="likealign">
                   <font-awesome-icon
                     icon="fa-regular fa-heart"
@@ -55,7 +62,7 @@
                     size="lg"
                   />
                 </div>
-              </b-col>
+              </b-col> -->
             </b-row>
           </b-card-text>
         </b-card>
@@ -135,6 +142,9 @@ export default {
     },
     verifyliked(id) {
       return this.isliked[id - 1];
+    },
+    redirect() {
+      this.$router.push("/donate");
     },
   },
 };

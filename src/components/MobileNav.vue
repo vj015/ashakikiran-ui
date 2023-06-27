@@ -29,15 +29,15 @@
         <li @click="handleredirect1('/contactus')">
           Contact us <font-awesome-icon icon="fa-solid fa-address-card" />
         </li>
-        <li @click="handleredirect1('/login')" v-if="!this.loggedin">
+        <!-- <li @click="handleredirect1('/login')" v-if="!this.loggedin">
           Login <font-awesome-icon icon="fa-solid fa-right-to-bracket" />
         </li>
         <li @click="handleredirect1('/userloggedin')" v-if="this.loggedin">
           {{ "Hi " + this.username + "!" }}
-        </li>
-        <li @click="logout()" v-if="this.loggedin">
+        </li> -->
+        <!-- <li @click="logout()" v-if="this.loggedin">
           Logout <font-awesome-icon icon="fa-solid fa-right-to-bracket" />
-        </li>
+        </li> -->
       </ul>
     </div>
     <div class="social-media">
@@ -50,12 +50,12 @@
 </template>
 
 <script>
-import swal from "sweetalert";
+// import swal from "sweetalert";
 export default {
   name: "MobileNav",
   data() {
     return {
-      loggedin: false,
+      // loggedin: false,
       username: "",
     };
   },
@@ -63,48 +63,48 @@ export default {
     handleredirect1(str) {
       this.$emit("togglesidebar", str);
     },
-    login() {
-      if (sessionStorage.getItem("username")) {
-        this.loggedin = true;
-        this.username = sessionStorage.getItem("username").substring(5);
-      } else {
-        this.loggedin = false;
-        this.username = "";
-      }
-    },
-    logout() {
-      swal({
-        title: "Are you sure?",
-        icon: "warning",
-        buttons: true,
-        dangerMode: true,
-      }).then((willDelete) => {
-        if (willDelete) {
-          sessionStorage.removeItem("frJWT");
-          sessionStorage.removeItem("username");
-          sessionStorage.removeItem("userid");
-          sessionStorage.removeItem("authrole");
-          sessionStorage.removeItem("id");
-          this.loggedin = false;
-          this.username = "";
-          swal("Logged Out!", {
-            icon: "success",
-          });
-        }
-      });
-      // swal({
-      //   title: "Are you sure you want to Logout?",
-      //   icon: "success",
-      // }).then(() => {
-      //   sessionStorage.removeItem("frJWT");
-      //   sessionStorage.removeItem("username");
-      //   sessionStorage.removeItem("userid");
-      //   sessionStorage.removeItem("authrole");
-      //   sessionStorage.removeItem("id");
-      //   this.loggedin = false;
-      //   this.username = "";
-      // });
-    },
+    // login() {
+    //   if (sessionStorage.getItem("username")) {
+    //     this.loggedin = true;
+    //     this.username = sessionStorage.getItem("username").substring(5);
+    //   } else {
+    //     this.loggedin = false;
+    //     this.username = "";
+    //   }
+    // },
+    // logout() {
+    //   swal({
+    //     title: "Are you sure?",
+    //     icon: "warning",
+    //     buttons: true,
+    //     dangerMode: true,
+    //   }).then((willDelete) => {
+    //     if (willDelete) {
+    //       sessionStorage.removeItem("frJWT");
+    //       sessionStorage.removeItem("username");
+    //       sessionStorage.removeItem("userid");
+    //       sessionStorage.removeItem("authrole");
+    //       sessionStorage.removeItem("id");
+    //       this.loggedin = false;
+    //       this.username = "";
+    //       swal("Logged Out!", {
+    //         icon: "success",
+    //       });
+    //     }
+    //   });
+    //   // swal({
+    //   //   title: "Are you sure you want to Logout?",
+    //   //   icon: "success",
+    //   // }).then(() => {
+    //   //   sessionStorage.removeItem("frJWT");
+    //   //   sessionStorage.removeItem("username");
+    //   //   sessionStorage.removeItem("userid");
+    //   //   sessionStorage.removeItem("authrole");
+    //   //   sessionStorage.removeItem("id");
+    //   //   this.loggedin = false;
+    //   //   this.username = "";
+    //   // });
+    // },
   },
   mounted() {
     this.login();
