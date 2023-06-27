@@ -1,127 +1,118 @@
 <template>
   <b-card no-body class="overflow-hidden">
-    <b-row no-gutters>
-      <b-col>
-        <b-card-body>
-          <b-card-text>
-            <div>
-              <div class="m-4">
-                <b-form-input
-                  type="text"
-                  placeholder="Enter your name"
-                  v-model="form.name"
-                ></b-form-input>
-              </div>
-              <div class="m-4">
-                <b-form-input
-                  type="email"
-                  placeholder="Enter your email"
-                  v-model="form.email"
-                ></b-form-input>
-              </div>
-              <div class="m-4">
-                <b-form-input
-                  type="number"
-                  placeholder="Enter your contact number"
-                  v-model="form.cnumber"
-                ></b-form-input>
-              </div>
-              <div class="m-4">
-                <b-form-input
-                  type="number"
-                  placeholder="Enter your whatsapp number"
-                  v-model="form.wnumber"
-                ></b-form-input>
-              </div>
-              <div class="m-4">
-                <b-form-datepicker
-                  :max="max"
-                  locale="en"
-                  v-model="demodob"
-                  placeholder="Enter your date of birth"
-                  @change="setdob()"
-                ></b-form-datepicker>
-              </div>
-              <div class="m-4">
-                <b-form-select
-                  v-model="form.gender"
-                  :options="options"
-                ></b-form-select>
-              </div>
-              <div class="m-4">
-                <b-form-input
-                  type="text"
-                  v-model="form.address"
-                  placeholder="Enter your address"
-                ></b-form-input>
-              </div>
-              <div class="m-4">
-                <b-form-input
-                  type="text"
-                  v-model="form.city"
-                  placeholder="Enter your city"
-                ></b-form-input>
-              </div>
-              <div class="m-4">
-                <b-form-input
-                  type="number"
-                  v-model="form.pincode"
-                  placeholder="Enter your pincode"
-                ></b-form-input>
-              </div>
-              <div class="m-4">
-                <b-form-input
-                  type="text"
-                  v-model="form.education"
-                  placeholder="Enter your highest education as of now"
-                ></b-form-input>
-              </div>
-              <div class="m-4">
-                <b-form-input
-                  type="text"
-                  v-model="form.college"
-                  placeholder="Enter your college"
-                ></b-form-input>
-              </div>
-              <div class="m-4">
-                <b-form-textarea
-                  id="textarea"
-                  v-model="form.reason"
-                  placeholder="Enter your reason for applying"
-                  rows="3"
-                  max-rows="6"
-                ></b-form-textarea>
-              </div>
-              <div class="m-4">
-                <b-form-select
-                  v-model="form.expertise"
-                  :options="expertise"
-                ></b-form-select>
-              </div>
-              <div class="m-4">
-                <b-form-checkbox
-                  id="checkbox-1"
-                  name="checkbox-1"
-                  @change="checktick()"
-                >
-                  All the information provided above is best of my known
-                </b-form-checkbox>
-              </div>
-              <div
-                class="m-4 d-flex flex-column justify-content-center align-items-center"
-              >
-                <b-button
-                  variant="danger"
-                  :disabled="!tnc"
-                  @click="registerintern()"
-                  >Apply</b-button
-                >
-              </div>
-            </div>
-          </b-card-text>
-        </b-card-body>
-      </b-col>
-    </b-row>
+    <b-card-text>
+      <div>
+        <div class="m-4">
+          <b-form-input
+            type="text"
+            placeholder="Enter your name"
+            v-model="form.name"
+          ></b-form-input>
+        </div>
+        <div class="m-4">
+          <b-form-input
+            type="email"
+            placeholder="Enter your email"
+            v-model="form.email"
+          ></b-form-input>
+        </div>
+        <div class="m-4">
+          <b-form-input
+            type="number"
+            placeholder="Enter your contact number"
+            v-model="form.cnumber"
+          ></b-form-input>
+        </div>
+        <div class="m-4">
+          <b-form-input
+            type="number"
+            placeholder="Enter your whatsapp number"
+            v-model="form.wnumber"
+          ></b-form-input>
+        </div>
+        <div class="m-4">
+          <b-form-datepicker
+            :max="max"
+            locale="en"
+            v-model="demodob"
+            placeholder="Enter your date of birth"
+            @change="setdob()"
+          ></b-form-datepicker>
+        </div>
+        <div class="m-4">
+          <b-form-select
+            v-model="form.gender"
+            :options="options"
+          ></b-form-select>
+        </div>
+        <div class="m-4">
+          <b-form-input
+            type="text"
+            v-model="form.address"
+            placeholder="Enter your address"
+          ></b-form-input>
+        </div>
+        <div class="m-4">
+          <b-form-input
+            type="text"
+            v-model="form.city"
+            placeholder="Enter your city"
+          ></b-form-input>
+        </div>
+        <div class="m-4">
+          <b-form-input
+            type="number"
+            v-model="form.pincode"
+            placeholder="Enter your pincode"
+          ></b-form-input>
+        </div>
+        <div class="m-4">
+          <b-form-input
+            type="text"
+            v-model="form.education"
+            placeholder="Enter your highest education as of now"
+          ></b-form-input>
+        </div>
+        <div class="m-4">
+          <b-form-input
+            type="text"
+            v-model="form.college"
+            placeholder="Enter your college"
+          ></b-form-input>
+        </div>
+        <div class="m-4">
+          <b-form-textarea
+            id="textarea"
+            v-model="form.reason"
+            placeholder="Enter your reason for applying"
+            rows="3"
+            max-rows="6"
+          ></b-form-textarea>
+        </div>
+        <div class="m-4">
+          <b-form-select
+            v-model="form.expertise"
+            :options="expertise"
+          ></b-form-select>
+        </div>
+        <div class="m-4">
+          <b-form-checkbox
+            id="checkbox-1"
+            name="checkbox-1"
+            @change="checktick()"
+          >
+            All the information provided above is best of my known
+          </b-form-checkbox>
+        </div>
+        <div
+          class="m-4 d-flex flex-column justify-content-center align-items-center"
+        >
+          <b-button variant="danger" :disabled="!tnc" @click="registerintern()"
+            >Apply</b-button
+          >
+        </div>
+      </div>
+    </b-card-text>
   </b-card>
 </template>
 <script>
