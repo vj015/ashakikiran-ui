@@ -284,6 +284,9 @@ export default {
       this.form.dob = str;
     },
   },
+  mounted() {
+    window.scrollTo(0, 0, "smooth");
+  },
 };
 </script>
 <style scoped>

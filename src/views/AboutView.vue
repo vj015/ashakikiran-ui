@@ -58,6 +58,9 @@ export default {
       this.$router.push("/register?member=true");
     },
   },
+  mounted() {
+    window.scrollTo(0, 0, "smooth");
+  },
 };
 </script>
 <style scoped>

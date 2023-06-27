@@ -141,6 +141,9 @@ export default {
       return this.isShowModal;
     },
   },
+  mounted() {
+    window.scrollTo(0, 0, "smooth");
+  },
 };
 </script>
 <style scoped>

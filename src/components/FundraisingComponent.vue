@@ -84,6 +84,7 @@ export default {
       this.items = this.items.splice(0, 1);
       this.showfeatured = true;
     }
+    window.scrollTo(0, 0, "smooth");
   },
   data() {
     return {

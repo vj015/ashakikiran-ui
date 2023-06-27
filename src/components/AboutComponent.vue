@@ -49,7 +49,6 @@
 export default {
   methods: {
     redirect() {
-      console.log("kkjkkj");
       this.$router.push("/about");
     },
   },
