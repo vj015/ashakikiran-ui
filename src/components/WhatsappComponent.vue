@@ -37,7 +37,7 @@ export default {
   }
 }
 @media screen and (max-width: 775px) {
-  .main img {
+  .whatsappimg {
     height: 20%;
     width: 15%;
     animation: none;
