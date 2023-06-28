@@ -35,6 +35,7 @@
         >
         <b-btn
           style="font-family: fantasy; color: black; border: 2px solid black"
+          href="/donate"
           >Pay</b-btn
         >
       </footer>
