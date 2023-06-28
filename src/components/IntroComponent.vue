@@ -28,14 +28,12 @@ export default {
       images: [
         {
           id: 1,
-          title:
-            "Join Hands with Us to Give Every Child a Better Tomorrow: Your Donation Can Make a Difference!",
+          title: "Join Hands with Us to Give Every Child a Better Tomorrow",
           src: require("../assets/images/BG_2M.webp"),
         },
         {
           id: 2,
-          title:
-            "Help Us Give a Voice to Every Child in Need: Your Donation Can Change Their Lives Forever!",
+          title: "Help Us Give a Voice to Every Child in Need",
           src: require("../assets/images/BG_4.webp"),
         },
         {
@@ -45,8 +43,7 @@ export default {
         },
         {
           id: 4,
-          title:
-            "Empowering Children to Reach Their Full Potential: Together We Can Make a Difference!",
+          title: "Empowering Children to Reach Their Full Potential",
           src: require("../assets/images/BG_1M.webp"),
         },
         {
@@ -80,6 +77,7 @@ export default {
   padding-bottom: 1.25rem;
   color: #fff;
   text-align: center;
+  top: 10%;
 }
 
 .carousel-caption h3 {
