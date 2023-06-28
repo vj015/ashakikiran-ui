@@ -67,7 +67,7 @@ export default {
 </script>
 <style>
 .img-fluid {
-  height: 600px !important;
+  height: 400px !important;
   opacity: 0.7;
 }
 .carousel-caption {
