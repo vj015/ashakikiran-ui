@@ -13,56 +13,25 @@
             <div class="d-flex justify-content-center formatheading">
               <h4>{{ item.title }}</h4>
             </div>
-            <!-- <b-progress
-              :value="item.currentamount"
-              :max="item.totalmount"
-              variant="danger"
-              class="mt-1 mb-1"
-            ></b-progress> -->
-            <!-- <h6>
-              Raised {{ item.currentamount }} of
-              {{ item.totalmount }}
-            </h6> -->
             <p>{{ item.message }}</p>
             <b-row>
               <b-col>
-                <!-- <b-btn lg variant="outline-danger" style="font-family: fantasy"
-                  >Donate</b-btn
-                > -->
                 <b-button
                   block
                   variant="danger"
+                  class="donatebtn"
                   style="font-family: fantasy"
                   @click="redirect()"
                   >Donate</b-button
                 >
+                <b-button
+                  block
+                  variant="danger"
+                  style="font-family: fantasy"
+                  @click="sharefundraise(item.id)"
+                  >Share</b-button
+                >
               </b-col>
-              <!-- <b-col class="abc">
-                <div class="likealign">
-                  <font-awesome-icon
-                    icon="fa-regular fa-heart"
-                    color="red"
-                    size="lg"
-                    @click="handleLike(item.id)"
-                    v-show="!verifyliked(item.id)"
-                  />
-                  <font-awesome-icon
-                    :icon="['fas', 'heart']"
-                    size="lg"
-                    color="red"
-                    @click="handleunLike(item.id)"
-                    v-show="verifyliked(item.id)"
-                  />
-                  <p>{{ item.likes }}</p>
-                </div>
-                <div class="sharealign">
-                  <font-awesome-icon
-                    :icon="['fas', 'share-from-square']"
-                    color="red"
-                    size="lg"
-                  />
-                </div>
-              </b-col> -->
             </b-row>
           </b-card-text>
         </b-card>
@@ -131,26 +100,25 @@ export default {
     };
   },
   methods: {
-    handleLike(id) {
-      this.isliked[id - 1] = true;
-      this.items[id - 1].likes += 1;
-    },
-    handleunLike(id) {
-      this.isliked[id - 1] = false;
-      if (this.items[id - 1].likes != 0) {
-        this.items[id - 1].likes -= 1;
-      }
-    },
-    verifyliked(id) {
-      return this.isliked[id - 1];
-    },
     redirect() {
       this.$router.push("/donate");
+    },
+    async sharefundraise(id) {
+      const urll = window.location.origin + "/fundraising/" + id;
+      const shareData = {
+        title: "Asha Ki Kiran",
+        text: "Fundraisings: Help the needy!",
+        url: urll,
+      };
+      await navigator.share(shareData);
     },
   },
 };
 </script>
 <style scoped>
+.donatebtn {
+  margin-right: 5px;
+}
 .formatheading {
   margin-top: 10px;
   /* max-height: 70px; */
