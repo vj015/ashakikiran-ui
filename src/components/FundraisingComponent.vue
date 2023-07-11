@@ -27,6 +27,7 @@
                 <b-button
                   block
                   variant="danger"
+                  class="donatebtn1"
                   style="font-family: fantasy"
                   @click="sharefundraise(item.id)"
                   >Share</b-button
@@ -118,6 +119,10 @@ export default {
 <style scoped>
 .donatebtn {
   margin-right: 5px;
+  margin-bottom: 2px;
+}
+.donatebtn1 {
+  margin-bottom: 2px;
 }
 .formatheading {
   margin-top: 10px;
